@@ -23,9 +23,9 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 <br>
 
 ## 🖥️ Wireframe
-Este é nosso wireframe para mobile e desktop respectivamente:
+Este é nosso wireframe para desktop:
 
-<img src="wireframe_mobile.gif" height=210px> <img src="wireframe_desktop.gif" height=210px>
+<img src="wireframe_desktop.gif" height=210px>
 
 > [Acesse nosso wireframe aqui.](https://www.figma.com/proto/PudLHq8E54vK2Psn8Jb6hD/API?node-id=37-391&scaling=min-zoom&page-id=26%3A2)
 

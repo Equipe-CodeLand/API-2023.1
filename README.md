@@ -15,9 +15,9 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
     <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"></img>
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
-    <img src= "https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
     <img src="https://img.shields.io/badge/Microsoft_Teams-6264A7?style=for-the-badge&logo=microsoft-teams&logoColor=white"></img>
-    <img src= "https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white"/>
 </p>
 
 <br>
@@ -25,7 +25,7 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 ## 🖥️ Wireframe
 Este é nosso wireframe para desktop:
 
-<img src="wireframe_desktop.gif" height=250px>
+<img src="wireframe_desktop.gif">
 
 > [Acesse nosso wireframe aqui.](https://www.figma.com/proto/PudLHq8E54vK2Psn8Jb6hD/API?node-id=37-391&scaling=min-zoom&page-id=26%3A2)
 
@@ -36,14 +36,6 @@ Este é nosso wireframe para desktop:
 - ✅ Backlog do Produto
 - ✅ Wireframe
 - ✅ Documentação
-
-<br>
-
-## 📉 Burndown das Sprints
-
-<h3>Sprint 1 (13/03/2023-02/04/2023):<h3>
-
-![Burndown](https://user-images.githubusercontent.com/126177124/229373011-07eaf716-3e0b-4ad4-aeeb-198131ea2a79.png)
 
 <br>
 
@@ -171,6 +163,17 @@ Este é nosso wireframe para desktop:
 
 <br>
 
+## 🚩 Sprints
+
+| Sprint | Início | Entrega | Status |
+|--- |--- |--- |:---:
+| 01 | 13/03/2023 | 02/04/2023 | ✔️ |
+| 02 | 03/04/2023 | 23/04/2023 |  |
+| 03 | 24/04/2023 | 14/05/2023 |  |
+| 04 | 15/05/2023 | 14/06/2023 |  |
+
+<br>
+
 ## 👥 Equipe
 
 | Função        | Nome                                | LinkedIn     | GitHub                                         |
@@ -183,18 +186,6 @@ Este é nosso wireframe para desktop:
 | Scrum Team    | Letícia Helena de Oliveira Carvalho | [<img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'/>](https://www.linkedin.com/in/letícia-helena-carvalho/) |  [<img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'/>](https://github.com/leticiacarvalho04) |
 | Scrum Team    | Livia Alves de Faria                | [<img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'/>](https://www.linkedin.com/in/livialvs) |  [<img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'/>](https://github.com/livialvs)          |
 | Scrum Team    | Luiz Felipe dos Santos              |   |  [<img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'/>](https://github.com/felipe-sant)       |
-
-
-<br>
-
-## 🚩 Sprints
-
-| Sprint | Início | Entrega | Status |
-|--- |--- |--- |:---:
-| 01 | 13/03/2023 | 02/04/2023 | ✔️ |
-| 02 | 03/04/2023 | 23/04/2023 |  |
-| 03 | 24/04/2023 | 14/05/2023 |  |
-| 04 | 15/05/2023 | 14/06/2023 |  |
 
 <br>
 

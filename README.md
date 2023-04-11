@@ -10,12 +10,12 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 ### 🛠️ Tecnologias utilizadas até o momento:
 
 <div align="center">
-    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></img>
-    <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"></img>
+    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+    <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/>
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
     <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Microsoft_Teams-6264A7?style=for-the-badge&logo=microsoft-teams&logoColor=white"></img>
+    <img src="https://img.shields.io/badge/Microsoft_Teams-6264A7?style=for-the-badge&logo=microsoft-teams&logoColor=white"/>
     <img src="https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white"/>
 </div>
 
@@ -24,7 +24,7 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 ## 🖥️ Wireframe
 Este é nosso wireframe para desktop:
 
-<img src="wireframe_desktop.gif">
+<img src="static/img/wireframe_desktop.gif">
 
 > [Acesse nosso wireframe aqui.](https://www.figma.com/proto/PudLHq8E54vK2Psn8Jb6hD/API?node-id=37-391&scaling=min-zoom&page-id=26%3A2)
 

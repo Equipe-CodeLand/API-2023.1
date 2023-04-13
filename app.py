@@ -7,11 +7,11 @@ def home():
     return render_template("index.html")
 
 @app.route("/pesquisa") 
-def quemsomos():
+def pesquisa():
     return render_template("pesquisa.html")
 
 @app.route("/sobreoprojeto") 
-def contato():
+def sobre():
     return render_template("sobre_o_projeto.html")
 
 if __name__ == '__main__':

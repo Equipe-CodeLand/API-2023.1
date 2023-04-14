@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+
+{% block conteudo %} 
+
+<div id="fundo-filtro">
+    <select id="Ano" name="Ano">
+        <option value="">Ano</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="total">Total</option>
+    </select>
+
+    <select id="cidade" name="Cidade">
+        <option value="">Cidade</option>
+        <option value="cacapava">Caçapava</option>
+        <option value="jacarei">Jacareí</option>
+        <option value="sao jose dos campos">São José dos Campos</option>
+        <option value="taubate">Taubaté</option>
+    </select>
+
+    <select id="topico" name="Tópico">
+        <option value="">Tópico</option>
+        <option value="hospitalizacao">Hospitalização</option>
+        <option value="vacinacao">Vacinação</option>
+        <option value="investimentos">Investimentos</option>
+        <option value="procedimentos">Procedimentos</option>
+        <option value="consultas">Consultas</option>
+        <option value="medicamentos">Medicamentos</option>
+        <option value="saude mental">Saúde Mental</option>
+    </select> 
+
+    <br>
+    <p>
+        <button>Filtrar</button>
+    </p>
+</div>
+
+{% endblock %} 

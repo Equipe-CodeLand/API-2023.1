@@ -2,6 +2,7 @@
 
 {% block conteudo %} 
 
+<!--Criação dos filtros-->
 <div id="fundo-filtro">
     <select id="Ano" name="Ano">
         <option value="">Ano</option>
@@ -36,5 +37,16 @@
         <button>Filtrar</button>
     </p>
 </div>
+
+<!--Criação dos gráficos-->
+
+<!-- Adicione o elemento canvas para o gráfico -->
+<div>
+    <canvas id="meyChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/javascript/script.js"></script>
+    
+    
 
 {% endblock %} 

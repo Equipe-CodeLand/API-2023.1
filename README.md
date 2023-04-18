@@ -28,7 +28,7 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 ## 🖥️ Wireframe
 Este é nosso wireframe para desktop:
 
-<img src="docs/wireframe gif/wireframe_desktop.gif">
+<img src="docs/wireframe gif/wireframe_desktop.gif" width="100%">
 
 > [Acesse nosso wireframe aqui.](https://www.figma.com/proto/0u2EL9sfpx35wkleBseaby/api?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width)
 
@@ -36,13 +36,17 @@ Este é nosso wireframe para desktop:
 
 ## 🚩 Sprints
 
-| Sprint |   Início   |  Entrega   | Status |
-| :----: | :--------: | :--------: | :----: |
-|   01   | 13/03/2023 | 02/04/2023 |   ✔️   |
-|   02   | 03/04/2023 | 23/04/2023 |   ⏳️   |
-|   03   | 24/04/2023 | 14/05/2023 |        |
-|   04   | 15/05/2023 | 14/06/2023 |        |
+| Sprint |   Início   |  Entrega   |                                      Relatório                                      | Status |
+| :----: | :--------: | :--------: | :---------------------------------------------------------------------------------: | :----: |
+|   01   | 13/03/2023 | 02/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V1.0">Relatório</a>  |    ✔️   |
+|   02   | 03/04/2023 | 23/04/2023 |                                                                                     |   ⏳️   |
+|   03   | 24/04/2023 | 14/05/2023 |                                                                                     |        |
+|   04   | 15/05/2023 | 14/06/2023 |                                                                                     |        |
+
+<br>
+
 <!-- 
+
 ### 👨‍💻 User Story
 
 | Identificador |                                                                                                          User Story                                                                                                           |
@@ -51,15 +55,19 @@ Este é nosso wireframe para desktop:
 |     US#02     | Eu enquanto usuário jornalista quero comparar ano a ano os procedimentos realizados entre os anos de 2019-2022                                                                                                                |
 |     US#03     | Eu enquanto usuário jornalista quero comparar ano a ano os tratamentos realizados entre os anos de 2019-2022                                                                                                                  |
 |     US#04     | Eu enquanto usuário jornalista quero comparar ano a ano os medicamentos utilizados entre os anos de 2019-2022                                                                                                                 |
-|     US#05     | Eu enquanto usuário jornalista, quero visualizar se houve uma variação em consultas, procedimentos, tratamentos ou medicamentos utilizados em pacientes com covid longa comparando os dados de 2019 com os posteriores à 2021 |
+|     US#05     | Eu enquanto usuário jornalista, quero visualizar se houve uma variação em consultas, proZcedimentos, tratamentos ou medicamentos utilizados em pacientes com covid longa comparando os dados de 2019 com os posteriores à 2021 |
 |     US#06     | Eu enquanto usuário jornalista, quero relacionar a variação dos dados acima com fatores ligados à Covid-19                                                                                                                    |
 |     US#07     | Eu enquanto usuário jornalista, quero saber a quantia investida/gasta em procedimentos relacionados a Covid-19                                                                                                                |
 |     US#08     | Eu enquanto usuário jornalista quero visualizar a participação do SUS no período 2019-2022                                                                                                                                    |
 |     US#09     | Eu enquanto usuário cliente, desejo visualizara as informações sobre o processo, produto final e os autores envolvidos neste projeto                                                                                          |
 |     US#10     | Eu enquanto cliente, desejo visualizar o product backlog do projeto                                                                                                                                                           |
-|     US#11     | Eu enquanto usuário jornalista, quero uma interface navegável de fácil acesso   
+|     US#11     | Eu enquanto usuário jornalista, quero uma interface navegável de fácil acesso 
+
+<br>
+
 -->
-### ✏️ Sprint Backlog 
+
+### ✏️ Sprint Backlog
 
 | US# | PRIORIDADE |           TAREFAS           |                                        DESCRIÇÂO                                        | ESTIMATIVA DE ESFORÇO |
 | :-: | :--------: | :-------------------------: | :-------------------------------------------------------------------------------------: | :-------------------: |
@@ -73,7 +81,6 @@ Este é nosso wireframe para desktop:
 |  -  |    Baixa   | Atualizar GitHub            | Atualizar a documentação e readme de acordo com as mudanças e adições dessa sprint      |        1 dias         |
 |  -  |    Baixa   | Comparação de dados         | Pegar os dados arrecadados e comparar a taxa de aumento e diminuição em relação ao anos |        1 dias         |
 |  -  |    Baixa   | Controle de versões         | Adicionar Tags ao que já foi feito e ao final da sprint                                 |        1 horas        |                                                                                                                                                                                                                                                                                                               |          14h          |
-    
 
 <br>
 

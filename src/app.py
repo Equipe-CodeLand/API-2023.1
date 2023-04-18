@@ -3,12 +3,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    title = "Home"
+    return render_template('index.html', title = title)
 
 @app.route('/pesquisa')
 def pesquisa():
-    return render_template('pesquisa.html')
+    title = "Pesquisas"
+    return render_template('pesquisa.html', title = title)
 
 @app.route('/sobre')
 def sobre():
-    return render_template('sobre.html')
+    title = "Sobre o Projeto"
+    return render_template('sobre.html', title = title)
+
+@app.route("/cacapava")
+def ccpv():
+    title = "Caçapava"
+    return render_template('ccpv.html', title = title)

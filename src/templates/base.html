@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/normalize.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="left-box"><img src="" alt="logo"></div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/pesquisa">Pesquisa</a>
+                </li>
+                <li>
+                    <a href="/sobre">Sobre o Projeto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1" id="icon_github">Visite nosso github!</a>
+        <p>© 2023 Copyright. All rights reserved.</p>
+    </footer>
+</body>
+</html>

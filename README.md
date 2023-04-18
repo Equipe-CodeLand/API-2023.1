@@ -65,7 +65,7 @@ Este é nosso wireframe para desktop:
 |  -  |    Alta    | Página: Sobre o projeto     | Criar a página Sobre o projeto, de acordo com o wireframe                               |        2 dias         |
 |  -  |  Moderada  | Apresentação e roteiro      | Estudo e desenvolvimento para apresentações e roteiros                                  |        2~3 dias       |
 |  -  |  Moderada  | Desenvolver a logo          | Criar uma logo para o site do projeto                                                   |        1 dias         |
-|  -  |  Moderada  | Informações no site         | Adicionar as informações(textos, mapas, dados, etc) às páginas                          |           -           |
+|  -  |  Moderada  | Informações no site         | Adicionar as informações(textos, mapas, dados, etc) às páginas                          |        1 dias         |
 |  -  |    Baixa   | Atualizar GitHub            | Atualizar a documentação e readme de acordo com as mudanças e adições dessa sprint      |        1 dias         |
 |  -  |    Baixa   | Comparação de dados         | Pegar os dados arrecadados e comparar a taxa de aumento e diminuição em relação ao anos |        1 dias         |
 |  -  |    Baixa   | Controle de versões         | Adicionar Tags ao que já foi feito e ao final da sprint                                 |        1 horas        |                                                                                                                                                                                                                                                                                                               |          14h          |

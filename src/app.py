@@ -17,6 +17,21 @@ def sobre():
     return render_template('sobre.html', title = title)
 
 @app.route("/cacapava")
-def ccpv():
+def cacapava():
     title = "Caçapava"
     return render_template('ccpv.html', title = title)
+
+@app.route("/sjc")
+def sjc():
+    title = "São José dos Campos"
+    return render_template('sjc.html', title = title)
+
+@app.route("/taubate")
+def tau():
+    title = "Taubaté"
+    return render_template('tau.html', title = title)
+
+@app.route("/jacarei")
+def jac():
+    title = "Jacareí"
+    return render_template('jac.html', title = title)

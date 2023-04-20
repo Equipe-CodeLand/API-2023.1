@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="centro">
+    Taubaté
+</h2>
+
+<h3 class="centro">
+    Clique abaixo na categoria que deseja acessar:
+</h3>
+
+<div class="botao">
+    <div>
+        <a href="/taubate/consultas"> Consultas </a>
+    </div>
+    <div>
+        <a href="/taubate/gastos"> Gastos </a>
+    </div>
+    <div>
+        <a href="/taubate/medicamentos"> Medicamentos </a>
+    </div>
+    <div>
+        <a href="/taubate/procedimentos"> Procedimentos </a>
+    </div>
+    <div>
+        <a href="/taubate/tratamentos"> Tratamentos </a>
+    </div>
+</div>
+<div class="centro" style="padding-bottom: 20px;">
+    <h2> Caso prefira, você pode ir para outra cidade: </h2>
+</div>
+<div class="grid-container">
+        <div>
+            <a href="/cacapava"> Caçapava </a>
+        </div>
+        <div>
+            <a href="/jacarei"> Jacareí </a>
+        </div>
+        <div>
+            <a href="/sjc"> São José dos Campos </a>
+        </div>
+</div>
+
+{% endblock %}

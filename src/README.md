@@ -13,7 +13,7 @@ git clone https://github.com/Equipe-01-DSM-2023/API-2023.1.git
 **4. Entre na pasta src utilizando o comando:**
 
 ``` 
-cd src 
+cd API-2023.1/src 
 ```
 
 **5. Utilize estes comandos para criar o venv e baixar o flask.**

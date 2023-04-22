@@ -25,6 +25,45 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 <br>
 
+## 💻 Rode a Aplicação:
+
+1. **Certifique de ter instalado na sua máquina o python 3.7 ou superior.** [Caso não tenha, baixe utilizando este link.](https://www.python.org/downloads/)
+
+2. **Abra o terminal do seu disposivo.**
+
+3. **Clone o repositório utilizando este comando:**
+
+    ```
+    git clone https://github.com/Equipe-01-DSM-2023/API-2023.1.git 
+    ```
+
+4. **Entre na pasta src utilizando o comando:**
+
+    ``` 
+    cd API-2023.1/src 
+    ```
+
+5. **Utilize estes comandos para criar o venv e baixar o flask.**
+
+    ```
+    python -m venv venv
+    .\venv\Scripts\activate
+    pip install -r requirements.txt
+    flask run
+    ```
+
+6. **Após isso, abra o seguinte link no navegador de sua preferência:** http://127.0.0.1:5000
+
+7. **Para fechar o ambiente virtual e sair digite:**
+
+    ```
+    deactivate
+    ```
+
+> [Caso tenha algum problema, siga essas instruções mais detalhadas.](src/README.md)
+
+<br>
+
 ## 🖥️ Wireframe
 Este é nosso wireframe para desktop:
 
@@ -45,42 +84,26 @@ Este é nosso wireframe para desktop:
 
 <br>
 
-<!-- 
+### ✏️ Sprint Backlog - 2º Sprint
 
-### 👨‍💻 User Story
-
-| Identificador |                                                                                                          User Story                                                                                                           |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|     US#01     | Eu enquanto usuário jornalista quero comparar ano a ano as consultas realizadas entre os anos de 2019-2022                                                                                                                    |
-|     US#02     | Eu enquanto usuário jornalista quero comparar ano a ano os procedimentos realizados entre os anos de 2019-2022                                                                                                                |
-|     US#03     | Eu enquanto usuário jornalista quero comparar ano a ano os tratamentos realizados entre os anos de 2019-2022                                                                                                                  |
-|     US#04     | Eu enquanto usuário jornalista quero comparar ano a ano os medicamentos utilizados entre os anos de 2019-2022                                                                                                                 |
-|     US#05     | Eu enquanto usuário jornalista, quero visualizar se houve uma variação em consultas, proZcedimentos, tratamentos ou medicamentos utilizados em pacientes com covid longa comparando os dados de 2019 com os posteriores à 2021 |
-|     US#06     | Eu enquanto usuário jornalista, quero relacionar a variação dos dados acima com fatores ligados à Covid-19                                                                                                                    |
-|     US#07     | Eu enquanto usuário jornalista, quero saber a quantia investida/gasta em procedimentos relacionados a Covid-19                                                                                                                |
-|     US#08     | Eu enquanto usuário jornalista quero visualizar a participação do SUS no período 2019-2022                                                                                                                                    |
-|     US#09     | Eu enquanto usuário cliente, desejo visualizara as informações sobre o processo, produto final e os autores envolvidos neste projeto                                                                                          |
-|     US#10     | Eu enquanto cliente, desejo visualizar o product backlog do projeto                                                                                                                                                           |
-|     US#11     | Eu enquanto usuário jornalista, quero uma interface navegável de fácil acesso 
+|                 PRIORIDADE                 |           TAREFAS           |                                        DESCRIÇÂO                                        | ESTIMATIVA DE ESFORÇO |
+| :----------------------------------------: | :-------------------------: | :-------------------------------------------------------------------------------------: | :-------------------: |
+| <span style="color:red">Alta</span>        | Desenvolver navbar e rodapé | Desenvolvimento do CSS padrão para as páginas                                           |        1 horas        |
+| <span style="color:red">Alta</span>        | Página: Home                | Criar a página Home, de acordo com o wireframe                                          |        3 dias         |
+| <span style="color:red">Alta</span>        | Página: Pesquisa            | Criar a página Pesquisa, de acordo com o wireframe                                      |        3 dias         |
+| <span style="color:red">Alta</span>        | Página: Sobre o projeto     | Criar a página Sobre o projeto, de acordo com o wireframe                               |        2 dias         |
+| <span style="color:yellow">Moderada</span> | Apresentação e roteiro      | Estudo e desenvolvimento para apresentações e roteiros                                  |        2~3 dias       |
+| <span style="color:yellow">Moderada</span> | Desenvolver a logo          | Criar uma logo para o site do projeto                                                   |        1 dias         |
+| <span style="color:yellow">Moderada</span> | Informações no site         | Adicionar as informações(textos, mapas, dados, etc) às páginas                          |        1 dias         |
+| <span style="color:green">Baixa</span>     | Atualizar GitHub            | Atualizar a documentação e readme de acordo com as mudanças e adições dessa sprint      |        1 dias         |
+| <span style="color:green">Baixa</span>     | Comparação de dados         | Pegar os dados arrecadados e comparar a taxa de aumento e diminuição em relação ao anos |        1 dias         |
+| <span style="color:green">Baixa</span>     | Controle de versões         | Adicionar Tags ao que já foi feito e ao final da sprint                                 |        1 horas        |                                                                                                                                                                                                                                                                                                               |          14h          |
 
 <br>
 
--->
+## 📜 Backlog Total
 
-### ✏️ Sprint Backlog
 
-| US# | PRIORIDADE |           TAREFAS           |                                        DESCRIÇÂO                                        | ESTIMATIVA DE ESFORÇO |
-| :-: | :--------: | :-------------------------: | :-------------------------------------------------------------------------------------: | :-------------------: |
-|  -  |    Alta    | Desenvolver navbar e rodapé | Desenvolvimento do CSS padrão para as páginas                                           |        1 horas        |
-|  -  |    Alta    | Página: Home                | Criar a página Home, de acordo com o wireframe                                          |        3 dias         |
-|  -  |    Alta    | Página: Pesquisa            | Criar a página Pesquisa, de acordo com o wireframe                                      |        3 dias         |
-|  -  |    Alta    | Página: Sobre o projeto     | Criar a página Sobre o projeto, de acordo com o wireframe                               |        2 dias         |
-|  -  |  Moderada  | Apresentação e roteiro      | Estudo e desenvolvimento para apresentações e roteiros                                  |        2~3 dias       |
-|  -  |  Moderada  | Desenvolver a logo          | Criar uma logo para o site do projeto                                                   |        1 dias         |
-|  -  |  Moderada  | Informações no site         | Adicionar as informações(textos, mapas, dados, etc) às páginas                          |           -           |
-|  -  |    Baixa   | Atualizar GitHub            | Atualizar a documentação e readme de acordo com as mudanças e adições dessa sprint      |        1 dias         |
-|  -  |    Baixa   | Comparação de dados         | Pegar os dados arrecadados e comparar a taxa de aumento e diminuição em relação ao anos |        1 dias         |
-|  -  |    Baixa   | Controle de versões         | Adicionar Tags ao que já foi feito e ao final da sprint                                 |        1 horas        |                                                                                                                                                                                                                                                                                                               |          14h          |
 
 <br>
 

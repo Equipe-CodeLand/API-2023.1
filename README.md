@@ -1,3 +1,5 @@
+<!-- Para melhor visualização do código, tire a quebra de linha automatica. -->
+
 # FATEC Profº Jessen Vidal - São José dos Campos - 1º Semestre DSM
 Projeto desenvolvido para a API (Aprendizagem por Projeto Integrado) do 1° semestre de Desenvolvimento de Software Multiplataforma (DSM) em parceria com a Vanguarda sobre dados relacionados à covid longa no Vale do Paraíba para um site de uso jornalístico.
 
@@ -103,6 +105,31 @@ Este é nosso wireframe para desktop:
 
 ## 📜 Backlog Total
 
+| SPRINTS |                 TAREFAS                 |                                                     DESCRIÇÃO                                                     | STATUS |
+| :-----: | :-------------------------------------: | :---------------------------------------------------------------------------------------------------------------: | :----: |
+|    1º   | Pesquisa consultas                      | Pesquisar sobre consulta realizadas no periodo entre 2019 e 2022.                                                 |    ✔️   |
+|    1º   | Pesquisa covid-longa                    | Pesquisar sobre covid-longa e seus sintomas.                                                                      |    ✔️   |
+|    1º   | Pesquisa financeira                     | Pesquisar sobre investimentos e gastos com a pandemia nos estados escolhidos, durante o periodo de 2019 até 2022. |    ✔️   |
+|    1º   | Pesquisa medicamentos                   | Pesquisar sobre medicamentos utilizados contra acovid e covid-longa durante a pandemia.                           |    ✔️   |
+|    1º   | Pesquisa procedimentos                  | Pesquisar sobre procedimentos realizados contra a covid e covid longa durante o período de 2019 até 2022.         |    ✔️   |
+|    1º   | Pesquisa saúde-mental                   | Pesquisar sobre a venda de  medicamentos relacionados com depressão durante a pandemia.                           |    ✔️   |
+|    1º   | Pesquisa tratamentos                    | Pesquisar sobre hospitalizações e vacinações durante a pandemia.                                                  |    ✔️   |
+|    2º   | Flask                                   | Organização e criação do necessário para desenvolver as páginas no FLASK.                                         |    ✔️   |
+|    2º   | Desenvolver barra de navegação e rodapé | Desenvolvimento do CSS padrão para as páginas.                                                                    |    ✔️   |
+|    2º   | Informações no protótipo                | Adicionar ao FIGMA, os textos, gráfico e informações que estarão no site.                                         |    ✔️   |
+|    2º   | Protótipo navegável - base (flask)      | Desenvolver uma base do protótipo para ser usada em outras páginas.                                               |    ✔️   |
+|    2º   | Protótipo navegável - Pesquisa          | Utilizar a base  do protótipo para desenvolver a página "pesquisa".                                               |    ✔️   |
+|    2º   | Protótipo navegável - sobre o projeto   | Utilizar a base do protótipo para desenvolver a página "sobre o projeto".                                         |    ✔️   |
+|    2º   | Desenvolver a logo                      | Criar uma logo para o site do projeto.                                                                            |    ✔️   |
+|    2º   | Controle de versões                     | Adicionar Tags ao que já foi feito e ao final da sprint.                                                          |    ✔️   |
+|    3º   | Desenvolvimento do BD                   |                                                                                                                   |   ❌   |
+|    3º   | Integrar com o site                     |                                                                                                                   |   ❌   |
+|    3º   | Adição dos dados ao site                |                                                                                                                   |   ❌   |
+|    3º   | Estudo de Flask                         | Estudar a sua funcionalidade e como pode ser aplicado no projeto.                                                 |   ❌   |
+|    3º   | Estudar SQL                             | Estudar a linguagem de BD para aplicação na próxima sprint.                                                       |   ❌   |
+|    3º   | Estudar integração do BD com python 3   | Estudar como implementar o BD com o site através de python 3, para a próxima sprint.                              |   ❌   |
+|    4º   | Testes                                  | Assegurar que o site e BD estão funcionando de acordo.                                                            |   ❌   |
+|    4º   | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                        |   ❌   |
 
 
 <br>

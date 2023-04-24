@@ -35,3 +35,28 @@ def tau():
 def jac():
     title = "Jacareí"
     return render_template('jac.html', title = title)
+
+@app.route("/ccpv_consultas")
+def ccpv_con():
+    title = "Consultas Caçapava"
+    return render_template("ccpv_consultas.html",title=title)
+
+@app.route("/ccpv_gastos")
+def ccpv_gastos():
+    title = "Gastos Caçapava"
+    return render_template("ccpv_gastos.html",title=title)
+
+@app.route("/ccpv_medicamentos")
+def ccpv_medicamentos():
+    title = "Medicamentos Caçapava"
+    return render_template("ccpv_medicamentos.html",title=title)
+
+@app.route("/ccpv_procedimentos")
+def ccpv_proc():
+    title = "Procedimentos Caçapava"
+    return render_template("ccpv_procedimentos.html",title=title)
+
+@app.route("/ccpv_tratamentos")
+def ccpv_trat():
+    title = "Tratamentos Caçapava"
+    return render_template("ccpv_tratamentos.html",title=title)

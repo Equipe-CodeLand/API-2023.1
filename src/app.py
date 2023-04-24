@@ -60,3 +60,28 @@ def ccpv_proc():
 def ccpv_trat():
     title = "Tratamentos Caçapava"
     return render_template("ccpv_tratamentos.html",title=title)
+
+@app.route("/sjc_consultas")
+def sjc_1():
+    title = "SJC consultas"
+    return render_template("sjc_consultas.html",title=title)
+
+@app.route("/sjc_gastos")
+def sjc_2():
+    title = "SJC gastos"
+    return render_template("sjc_gastos.html",title=title)
+
+@app.route("/sjc_medicamentos")
+def sjc_3():
+    title = "SJC medicamentos"
+    return render_template("sjc_medicamentos.html",title=title)
+
+@app.route("/sjc_procedimentos")
+def sjc_4():
+    title = "SJC procedimentos"
+    return render_template("sjc_procedimentos.html",title=title)
+
+@app.route("/sjc_tratamentos")
+def sjc_5():
+    title = "SJC tratamentos"
+    return render_template("sjc_tratamentos.html",title=title)

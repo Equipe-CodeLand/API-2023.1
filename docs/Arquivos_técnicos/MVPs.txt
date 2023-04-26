@@ -1,0 +1,19 @@
+MVP sprint 1
+
+Arrecadação de informações sobre o tema apresentado do projeto
+
+MVP sprint 2
+
+Desenvolvimento de um site simples para apresentação das informações arrecadadas
+
+MVP sprint 3
+
+Desenvolvimento de um método de filtragem de informações para facilitar a pesquisa pelas informações
+
+MVP sprint 4
+
+
+
+MVP geral:
+
+O MVP é a ideia base do projeto. Que deve apresentar as necessidades básicas para a distribuição de informações coletadas do DATASUS(TABNET) referentes ao sistema de saúde de municípios específicos (São José dos Campos, Jacareí, Taubaté e Caçapava), para que possam ser avaliadas. 

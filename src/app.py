@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     title = "Home"
-    return render_template('index.html', title = title)
+    return render_template('home.html', title = title)
 
 @app.route('/pesquisa')
 def pesquisa():

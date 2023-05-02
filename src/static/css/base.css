@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #D0FFCE;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    border-bottom: 3px solid #202020;
+    padding: 5px;
+}
+
+header div#left-box {
+    /* background-color: yellowgreen; */
+    padding-left: 5%;
+}
+
+header div#left-box img {
+    width: 126px;
+}
+
+header nav ul {
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+header nav ul li {
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+header nav ul li a {
+    color: #202020;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #1AB85C;
+    padding: 20px 0px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    margin-top: 7%;
+}
+
+footer a {
+    color: #202020;
+    font-weight: 600;
+}
+
+footer a::before {
+    content: url(../img/github-logo_16px.png);
+    padding-right: 5px;
+}
+
+footer p {
+    margin-top: 10px;
+    color: hsla(0, 0%, 13%, 0.8);
+}

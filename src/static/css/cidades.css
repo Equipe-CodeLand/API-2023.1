@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #202020;
+}
+
+h1 {
+    margin: 40px 0px;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+h2 {
+    margin: 20px 0px;
+    font-size: 1.2em;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin: auto;
+    padding: 40px 0px;
+    max-width: 1600px;
+    min-width: none;
+    height: 300px;
+    text-align: center;
+}
+
+section div {
+    display: grid;
+    margin: auto;
+    text-align: center;
+}
+
+section div a {
+    background-color: #d0ffce;
+    display: grid;
+    margin: auto;
+    padding: 5px;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    color: #202020;
+    border: 0px solid #d0ffce;
+    border-radius: 10%;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1em;
+}
+
+section div a:hover {
+    background-color: #c2ecc0;
+    border: 10px solid #c2ecc0;
+    font-weight: bold;
+}
+
+.grid-container {
+    background-color: #F79593;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: auto;
+    padding: 20px 5%;
+    width: 70%;
+    height: 80px;
+    border: 1px solid #202020;
+}
+
+.grid-container div {
+    display: grid;
+    margin: auto;
+    text-align: center;
+}
+
+.grid-container div a {
+    background-color: white;
+    border: 1px solid #202020;
+    display: grid;
+    align-items: center;
+    width: 220px;
+    height: 60px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #202020;
+}

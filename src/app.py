@@ -1,15 +1,46 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
+
 app = Flask(__name__)
+
+Medicamento = '/static/imgs/img graficos/medicamentos/sjc_medicamentos.png'
+
+
+dados = [
+    {'cidade':'Selecione uma cidade', 'value':''},
+    {'cidade':'Caçapava', 'value': 'cacapava'},
+    {'cidade': 'Jacareí', 'value': 'jacarei'},
+    {'cidade':'São José dos Campos', 'value':'sjc'},
+    {'cidade':'Taubaté', 'value':'taubate'},
+
+    {'topico':'Selecione um tópico', 'value':''},
+    {'topico':'Hospitalização', 'value':'hospitalizacao'},
+    {'topico':'Vacinação', 'value':'vacinacao'},
+    {'topico':'Investimentos', 'value':'investimentos'},
+    {'topico':'Consultas', 'value':'consultas'},
+    {'topico':'Medicamentos', 'value':'medicamentos'},
+    {'topico':'Saúde Mental', 'value':'saude_mental'}
+
+]
 
 @app.route('/')
 def home():
     title = "Home"
     return render_template('index.html', title = title)
 
-@app.route('/pesquisa')
+@app.route('/pesquisa', methods=['GET'])
 def pesquisa():
     title = "Pesquisas"
-    return render_template('pesquisa.html', title = title)
+    filtro = request.form.get("filtro")
+    filtered_data = []
+
+    for item in dados:
+        if item["cidade"] == filtro:
+            filtered_data.append(item)
+        else:
+            filtered_data.append(item)
+
+    return render_template('pesquisa.html', title=title, filtered_data=filtered_data)
+
 
 @app.route('/sobre')
 def sobre():

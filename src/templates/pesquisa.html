@@ -1,23 +1,51 @@
 {% extends "base.html" %} 
 
+{% block scripts %}
+
+<link rel="stylesheet" href="../static/js/filtros.js">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+{% endblock %}
+
+
 {% block content %} 
 
 <!--Criação dos filtros-->
-<main id="fundo">
+<div id="fundo">
+    <form id="form-search" action="/" method="GET">
     <div class="grid-container">
-        <div>
-            <a href="/cacapava"> Caçapava </a>
-        </div>
-        <div>
-            <a href="/jacarei"> Jacareí </a>
-        </div>
-        <div>
-            <a href="/sjc"> São José dos Campos </a>
-        </div>
-        <div>
-            <a href="/taubate"> Taubaté </a>
-        </div>
+        <label for="filtro">Filtrar por:</label>
+        <select id="cidade" name="Cidade" onchange="conteudos()">
+            <option value="">Selecione uma cidade</option>
+            <option value="cacapava">Caçapava</option>
+            <option value="jacarei">Jacareí</option>
+            <option value="sjc">São José dos Campos</option>
+            <option value="taubate">Taubaté</option>
+        </select>
+
+        <select id="topico" name="Tópico" onchange="conteudos()">
+            <option value="">Selecione um tópico de pesquisa</option>
+            <option value="hospitalizacao">Hospitalização</option>
+            <option value="vacinacao">Vacinação</option>
+            <option value="investimentos">Investimentos</option>
+            <option value="procedimentos">Procedimentos</option>
+            <option value="consultas">Consultas</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="saude_mental">Saúde Mental</option>
+        </select> 
     </div>
+
+    <div class="grid-container-btn">
+        <button type="submit" onclick="ShowSelect(['cidade', 'topico'], this)" id="filtrar-btn">
+            Filtrar
+        </button>
+    </div>
+    </form>
+    <br>
+
+</div>
+
+<div>
     <div class="conteudo">
         <div class="text">
             <p>Adicionamos um sistema de filtros para facilitar a seleção dos dados de acordo com suas necessidades, facilitando a análise e interpretação das informações coletadas sobre a Covid Longa na região do Vale do Paraíba.  Sendo assim, o site possui um filtro anual para visualizar as informações ao longo dos anos de 2019 à 2021, um filtro de municípios, o que irá possibilitar análises em nível local e também será possível selecionar um filtro por tópicos referentes á Covid-19 e Covid Longa, permitindo uma análise detalhada dos diferentes aspectos dessa condição de saúde.</p>
@@ -26,5 +54,13 @@
             <img src="../static/imgs/vale_do_paraiba.png" alt="" id="valeparaiba">
         </div>
     </div>
-</main>
+</div>
+
+<div id="resultados">
+    <ul>
+        <!--Aqui ficarão so resultados-->
+    </ul>
+</div>
+
+    
 {% endblock %} 

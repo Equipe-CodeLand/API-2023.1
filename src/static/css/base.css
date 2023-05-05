@@ -46,6 +46,11 @@ header nav ul li a {
     color: #202020;
     font-size: 1em;
     font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    font-weight: 800;
 }
 
 footer {

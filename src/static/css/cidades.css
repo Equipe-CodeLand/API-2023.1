@@ -24,13 +24,12 @@ h2 {
 }
 
 section {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    margin: auto;
-    padding: 40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    padding: 40px;
     max-width: 1600px;
     min-width: none;
-    height: 300px;
     text-align: center;
 }
 
@@ -38,6 +37,8 @@ section div {
     display: grid;
     margin: auto;
     text-align: center;
+    padding: 20px;
+    height: 200px;
 }
 
 section div a {
@@ -53,6 +54,7 @@ section div a {
     border-radius: 10%;
     font-family: "Inter", sans-serif;
     font-size: 1.1em;
+    transition: 0.3s;
 }
 
 section div a:hover {

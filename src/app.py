@@ -27,14 +27,14 @@ def home():
     title = "Home"
     return render_template('index.html', title = title)
 
-@app.route('/pesquisa', methods=['GET'])
+@app.route('/pesquisa', methods=['POST','GET'])
 def pesquisa():
     title = "Pesquisas"
     filtro = request.form.get("filtro")
     filtered_data = []
 
     for item in dados:
-        if item["cidade"] == filtro:
+        if "cidade" in item and item["cidade"] == filtro:
             filtered_data.append(item)
         else:
             filtered_data.append(item)

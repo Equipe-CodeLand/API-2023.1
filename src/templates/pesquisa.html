@@ -12,10 +12,10 @@
 
 <!--Criação dos filtros-->
 <div id="fundo">
-    <form id="form-search" action="/" method="GET">
+    <form id="form-search" action="/pesquisa" method="POST">
     <div class="grid-container">
         <label for="filtro">Filtrar por:</label>
-        <select id="cidade" name="Cidade" onchange="conteudos()">
+        <select id="cidade" name="filtro" onchange="conteudos()">
             <option value="">Selecione uma cidade</option>
             <option value="cacapava">Caçapava</option>
             <option value="jacarei">Jacareí</option>
@@ -23,7 +23,7 @@
             <option value="taubate">Taubaté</option>
         </select>
 
-        <select id="topico" name="Tópico" onchange="conteudos()">
+        <select id="topico" name="filtro" onchange="conteudos()">
             <option value="">Selecione um tópico de pesquisa</option>
             <option value="hospitalizacao">Hospitalização</option>
             <option value="vacinacao">Vacinação</option>
@@ -56,11 +56,12 @@
     </div>
 </div>
 
-<div id="resultados">
-    <ul>
-        <!--Aqui ficarão so resultados-->
-    </ul>
-</div>
+<ul>
+    {% for cidade in dados %}
+        <li>{{ cidade["cidade"] }} - {{ cidade["populacao"] }}</li>
+    {% endfor %}
+</ul>
 
-    
+ 
+
 {% endblock %} 

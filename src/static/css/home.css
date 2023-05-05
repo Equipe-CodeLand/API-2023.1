@@ -9,12 +9,12 @@ main#index {
     max-width: 1200px;
     min-width: none;
     margin: auto;
+    padding: 40px 10px;
 }
 
 div.content {
     /* background-color: blue; */
-    margin: 20px;
-    padding: 20px;
+    margin: 0px 40px;
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
@@ -28,8 +28,8 @@ div.content div.left-box {
 
 div.content div.left-box p {
     font-family: "Inter", sans-serif;
-    line-height: 25px;
-    font-size: 0.9em;
+    line-height: 30px;
+    font-size: 1em;
     color: #202020;
 }
 
@@ -42,14 +42,15 @@ div.content div.right-box {
     text-align: right;
 }
 
-div.content#safe div.left-box ul li {
-    margin-left: 20px;
+
+div.content#safe div.left-box ul {
+    padding-left: 0px;
 }
 
 div.content#safe div.left-box ul li {
     font-family: "Inter", sans-serif;
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 5px;
 }
 
@@ -68,13 +69,18 @@ div.content div.right-box img#safeicon {
 main div#content_2 {
     /* background-color: aqua; */
     margin-top: 40px;
-    padding: 0px 40px;
+    margin-bottom: 20px;
+    padding: 0px 10px;
     font-family: "Inter", sans-serif;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #202020;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
+    main .content#text div.left-box {
+        text-align: center;
+    }
+
     main .content {
         grid-template-columns: 100%;
     }

@@ -62,7 +62,7 @@ main {
 }
 
 #content_2 table {
-    width: 600px;
+    width: 800px;
     border-collapse: collapse;
     background-color: #fcbab9;
     font-family: "Inter", sans-serif;
@@ -87,7 +87,7 @@ main {
     background-color: #fcbab9;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
     #content_1 {
         grid-template-columns: 100%;
     }
@@ -98,7 +98,5 @@ main {
 
     #content_2 table {
         width: 100%;
-        border-collapse: collapse;
-        background-color: #fcbab9;
     }
 }

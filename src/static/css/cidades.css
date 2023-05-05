@@ -61,32 +61,37 @@ section div a:hover {
     font-weight: bold;
 }
 
-.grid-container {
+div.grid-container {
     background-color: #F79593;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    margin: auto;
-    padding: 20px 5%;
-    width: 70%;
-    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    padding: 20px 80px;
     border: 1px solid #202020;
 }
 
-.grid-container div {
-    display: grid;
-    margin: auto;
-    text-align: center;
-}
-
-.grid-container div a {
+div.grid-container a {
     background-color: white;
     border: 1px solid #202020;
+    margin: 15px auto;
+    padding: 5px 20px;
     display: grid;
     align-items: center;
-    width: 220px;
     height: 60px;
+    width: 180px;
     font-family: "Inter", sans-serif;
     font-size: 1.1em;
     text-decoration: none;
     color: #202020;
+}
+
+@media (max-width: 650px) {
+    div.grid-container {
+        padding: 20px 40px;
+    }
+    
+    div.grid-container a {
+        width: 160px;
+    }
 }

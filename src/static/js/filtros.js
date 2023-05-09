@@ -85,4 +85,3 @@ select.addEventListener('change', function() {
       });
     });
   });
-  

@@ -1,10 +1,6 @@
 {% extends "base.html" %} 
 
 {% block scripts %}
-
-<link rel="stylesheet" href="../static/js/filtros.js">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 {% endblock %}
 
 
@@ -12,21 +8,21 @@
 
 <!--Criação dos filtros-->
 <div id="fundo">
-    <form id="form-search" action="/pesquisa" method="POST">
+    <form id="form-search">
     <div class="grid-container">
         <label for="filtro">Filtrar por:</label>
-        <select id="cidade" name="filtro" onchange="conteudos()">
+        <select id="cidade" name="filtro">
             <option value="">Selecione uma cidade</option>
-            <option value="cacapava">Caçapava</option>
-            <option value="jacarei">Jacareí</option>
-            <option value="sjc">São José dos Campos</option>
-            <option value="taubate">Taubaté</option>
+            <option value="caçapava">Caçapava</option>
+            <option value="jacareí">Jacareí</option>
+            <option value="são josé dos campos">São José dos Campos</option>
+            <option value="taubaté">Taubaté</option>
         </select>
 
-        <select id="topico" name="filtro" onchange="conteudos()">
+        <select id="topico" name="filtro">
             <option value="">Selecione um tópico de pesquisa</option>
             <option value="hospitalizacao">Hospitalização</option>
-            <option value="vacinacao">Vacinação</option>
+            <option value="vacinação">Vacinação</option>
             <option value="investimentos">Investimentos</option>
             <option value="procedimentos">Procedimentos</option>
             <option value="consultas">Consultas</option>
@@ -36,7 +32,7 @@
     </div>
 
     <div class="grid-container-btn">
-        <button type="submit" onclick="ShowSelect(['cidade', 'topico'], this)" id="filtrar-btn">
+        <button type="button" onclick="filtrar()" id="filtrar-btn">
             Filtrar
         </button>
     </div>
@@ -54,6 +50,9 @@
             <img src="../static/imgs/vale_do_paraiba.png" alt="" id="valeparaiba">
         </div>
     </div>
+</div>
+<div id="resultado">
+    {{data}}
 </div>
 
 <ul>

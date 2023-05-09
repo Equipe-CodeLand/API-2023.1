@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS, cross_origin
+from pesquisa import *
 
 app = Flask(__name__)
+CORS(app, support_credentials=True)
 
 Medicamento = '/static/imgs/img graficos/medicamentos/sjc_medicamentos.png'
 
@@ -26,6 +29,12 @@ dados = [
 def home():
     title = "Home"
     return render_template('index.html', title = title)
+
+@app.route('/filtrar', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def pesquisar():
+    print(pesquisar_csv(request.get_json()))
+    return pesquisar_csv(request.get_json())
 
 @app.route('/pesquisa', methods=['POST','GET'])
 def pesquisa():

@@ -3,12 +3,12 @@ from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
-app.config["MYSQL_Host"] = "127.0.0.1"
+mysql = MySQL(app)
+
+app.config["MYSQL_Host"] = "localhost"
 app.config["MYSQL_USER"] = "root"
 app.config["MYSQL_PASSWORD"] = "12345"
 app.config["MYSQL_DB"] = "api_2023_1"
-
-mysql = MySQL(app)
 
 @app.route('/')
 def home():
@@ -20,8 +20,6 @@ def pesquisa():
     title = "Pesquisas"
     return render_template('pesquisa.html', title = title)
 
-
-
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():
     if request.method == "POST":
@@ -29,10 +27,15 @@ def sobre():
         comentario = request.form["comentario"]
 
         cur = mysql.connection.cursor()
-        cur.execute(
-            "INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario),
-        )
-
+        cur.execute("create database if not exists api_2023_1;")
+        cur.execute("use api_2023_1;")
+        cur.execute('''
+        create table if not exists feedback (
+            código int auto_increment primary key,
+            email varchar (60),
+            comentario varchar (255),
+            data_envio  datetime not null default now());''')
+        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
         mysql.connection.commit()
         cur.close()
 

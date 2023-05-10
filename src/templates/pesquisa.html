@@ -1,6 +1,12 @@
 {% extends "base.html" %} 
 
 {% block scripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.min.js" integrity="sha512-nfUlp2ZWPKWlnAH/OsMeAqRSYBxOdPYeBXwceyw6QqqZ7uTT/s5/eS1hMKphjVBouk0jf/JQ8ULVJRnEqSHkXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+    <!-- Script do Chart.js -->
+    <script src="../static/js/filtro.js"></script>
 {% endblock %}
 
 
@@ -32,7 +38,7 @@
     </div>
 
     <div class="grid-container-btn">
-        <button type="button" onclick="filtrar()" id="filtrar-btn">
+        <button type="submit" onclick="filtrar()" id="filtrar-btn">
             Filtrar
         </button>
     </div>
@@ -51,14 +57,14 @@
         </div>
     </div>
 </div>
-<div id="resultado"></div>
 
-<ul>
-    {% for cidade in dados %}
-        <li>{{ cidade["cidade"] }} - {{ cidade["populacao"] }}</li>
-    {% endfor %}
-</ul>
-
- 
+<div id="resultado">
+    <!-- Inicio gráficos -->
+    <div class="chartCard">
+        <div class="chartBox">
+          <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</div>
 
 {% endblock %} 

@@ -39,16 +39,7 @@ def pesquisar():
 @app.route('/pesquisa', methods=['POST','GET'])
 def pesquisa():
     title = "Pesquisas"
-    filtro = request.form.get("filtro")
-    filtered_data = []
-
-    for item in dados:
-        if "cidade" in item and item["cidade"] == filtro:
-            filtered_data.append(item)
-        else:
-            filtered_data.append(item)
-
-    return render_template('pesquisa.html', title=title, filtered_data=filtered_data)
+    return render_template('pesquisa.html', title=title)
 
 
 @app.route('/sobre')

@@ -17,7 +17,7 @@ def pesquisar_csv(filtro):
     return retorno
 
 def filtrar_csv(cidade, tipo_dado):
-    csv = open('../docs/Arquivos CSV/' + tipo_dado + ".csv")
+    csv = open('../docs/Arquivos_CSV/' + tipo_dado + ".csv")
     colunas = csv.readline().split('\n')[0].split(';')
     tipo = {
         "tipo": tipo_dado

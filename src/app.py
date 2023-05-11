@@ -1,5 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
+from flask_mysqldb import MySQL
+
 app = Flask(__name__)
+
+mysql = MySQL(app)
+
+app.config["MYSQL_Host"] = "localhost"
+app.config["MYSQL_USER"] = "root"
+app.config["MYSQL_PASSWORD"] = "12345"
+app.config["MYSQL_DB"] = "api_2023_1"
 
 @app.route('/')
 def home():
@@ -11,10 +20,27 @@ def pesquisa():
     title = "Pesquisas"
     return render_template('pesquisa.html', title = title)
 
-@app.route('/sobre')
+@app.route('/sobre', methods=["GET", "POST"])
 def sobre():
-    title = "Sobre o Projeto"
-    return render_template('sobre.html', title = title)
+    if request.method == "POST":
+        email = request.form["email"]
+        comentario = request.form["comentario"]
+
+        cur = mysql.connection.cursor()
+        cur.execute("create database if not exists api_2023_1;")
+        cur.execute("use api_2023_1;")
+        cur.execute('''
+        create table if not exists feedback (
+            código int auto_increment primary key,
+            email varchar (60),
+            comentario varchar (255),
+            data_envio  datetime not null default now());''')
+        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
+        mysql.connection.commit()
+        cur.close()
+
+        return "Muito obrigado! Seu feedback foi enviado com sucesso!"
+    return render_template('sobre.html')
 
 @app.route("/cacapava")
 def cacapava():
@@ -85,3 +111,6 @@ def sjc_4():
 def sjc_5():
     title = "SJC tratamentos"
     return render_template("sjc_tratamentos.html",title=title)
+
+if __name__ == "__main__":
+    app.run(debug=True)

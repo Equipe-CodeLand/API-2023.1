@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+img#covid_longa {
+    width: 100%;
+}
+
+main#index {
+    /* background-color: lightgray; */
+    max-width: 1200px;
+    min-width: none;
+    margin: auto;
+    padding: 40px 10px;
+}
+
+div.content {
+    /* background-color: blue; */
+    margin: 0px 40px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+
+div.content div.left-box {
+    /* background-color: red; */
+    padding: 10px;
+    text-align: left;
+}
+
+div.content div.left-box p {
+    font-family: "Inter", sans-serif;
+    line-height: 30px;
+    font-size: 1em;
+    color: #202020;
+}
+
+div.content div.left-box p strong.mark {
+    color: #1F6A21;
+}
+
+div.content div.right-box {
+    /* background-color: yellow; */
+    text-align: right;
+}
+
+
+div.content#safe div.left-box ul {
+    padding-left: 0px;
+}
+
+div.content#safe div.left-box ul li {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    padding: 5px;
+}
+
+div.content#safe div.right-box {
+    text-align: center;
+}
+
+div.content div.right-box img#valeparaiba {
+    width: 80%;
+}
+
+div.content div.right-box img#safeicon {
+    width: 40%;
+}
+
+main div#content_2 {
+    /* background-color: aqua; */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    color: #202020;
+}
+
+@media (max-width: 600px) {
+    main .content#text div.left-box {
+        text-align: center;
+    }
+
+    main .content {
+        grid-template-columns: 100%;
+    }
+
+    main .content .right-box {
+        display: none;
+    }
+}

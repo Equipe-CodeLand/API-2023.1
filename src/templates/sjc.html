@@ -2,44 +2,36 @@
 
 {% block content %}
 
-<h2 class="centro">
-    São José dos Campos
-</h2>
+<link rel="stylesheet" href="../static/css/cidades.css">
 
-<h3 class="centro">
-    Clique abaixo na categoria que deseja acessar:
-</h3>
+<h1>São José dos Campos</h1>
 
-<div class="botao">
+<h2>Clique abaixo na categoria que deseja acessar:</h2>
+
+<section>
     <div>
-        <a href="/sjc_consultas"> Consultas </a>
+        <a>Consultas</a>
     </div>
     <div>
-        <a href="/sjc_gastos"> Gastos </a>
+        <a>Gastos</a>
     </div>
     <div>
-        <a href="/sjc_medicamentos"> Medicamentos </a>
+        <a>Medicamentos</a>
     </div>
     <div>
-        <a href="/sjc_procedimentos"> Procedimentos </a>
+        <a>Procedimentos</a>
     </div>
     <div>
-        <a href="/sjc_tratamentos"> Tratamentos </a>
+        <a>Tratamentos</a>
     </div>
-</div>
-<div class="centro" style="padding-bottom: 20px;">
-    <h2> Caso prefira, você pode ir para outra cidade: </h2>
-</div>
+</section>
+
+<h2> Caso prefira, você pode ir para outra cidade: </h2>
+
 <div class="grid-container">
-        <div>
-            <a href="/cacapava"> Caçapava </a>
-        </div>
-        <div>
-            <a href="/jacarei"> Jacareí </a>
-        </div>
-        <div>
-            <a href="/taubate"> Taubaté </a>
-        </div>
+    <a href="/cacapava"> Caçapava </a>
+    <a href="/jacarei"> Jacareí </a>
+    <a href="/taubate"> Taubaté </a>
 </div>
 
 {% endblock %}

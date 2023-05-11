@@ -1,0 +1,102 @@
+main {
+    max-width: 1400px;
+    min-width: none;
+    margin: auto;
+}
+
+#content_1 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 40px 0px;
+}
+
+.left-box {
+    display: grid;
+    align-content: center;
+    padding: 40px;
+}
+
+.left-box p {
+    font-family: "Inter", sans-serif;
+    line-height: 30px;
+    font-size: 0.9em;
+    color: #202020;
+    margin-bottom: 30px;
+}
+
+.right-box {
+    align-content: center;
+    display: grid;
+}
+
+.right-box #image {
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 400px;
+}
+
+.right-box #image #covid_verde {
+    position: absolute;
+    width: 250px;
+    left: 0px;
+    top: 0px;
+}
+
+.right-box #image #covid_rosa {
+    position: absolute;
+    width: 140px;
+    left: 200px;
+    top: 240px;
+}
+
+#content_2 {
+    padding: 20px;
+}
+
+#content_2 h1 {
+    margin-bottom: 40px;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+
+#content_2 table {
+    width: 800px;
+    border-collapse: collapse;
+    background-color: #fcbab9;
+    font-family: "Inter", sans-serif;
+}
+
+#content_2 th,
+#content_2 td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#content_2 th {
+    background-color: #F79593;
+}
+
+#content_2 tr:nth-child(even) {
+    background-color: #fcbab9;
+}
+
+#content_2 tr:hover {
+    background-color: #fcbab9;
+}
+
+@media (max-width: 1000px) {
+    #content_1 {
+        grid-template-columns: 100%;
+    }
+
+    .right-box {
+        display: none;
+    }
+
+    #content_2 table {
+        width: 100%;
+    }
+}

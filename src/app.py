@@ -1,7 +1,10 @@
 from flask import Flask, request, render_template
 from flask_mysqldb import MySQL
+#import pandas
 
 app = Flask(__name__)
+
+#dados = pandas.read_csv('dados.csv')
 
 mysql = MySQL(app)
 
@@ -15,10 +18,17 @@ def home():
     title = "Home"
     return render_template('home.html', title = title)
 
-@app.route('/pesquisa')
+@app.route('/pesquisa', methods=["GET", "POST"])
 def pesquisa():
+    if request.method == "POST":
+        cidade = request.form['cidade']
+        topico = request.form['topico']
+        #filtrado = dados[(dados.cidade == cidade) & (dados.topico == topico)]
+        title = "Resultado"
+        return render_template('resultado.html', cidade=cidade, topico=topico, title = title)
     title = "Pesquisas"
-    return render_template('pesquisa.html', title = title)
+    return render_template('pesquisa.html', title = title, cidades=['Caçapava', 'Jacareí', 'São José dos Campos', 'Taubaté'], topicos=['Consultas', 'Hospitalizações', 'Investimentos', 'Medicamentos', 'Saúde mental', 'Vacinação'])
+
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():

@@ -17,9 +17,29 @@ function filtrar() {
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         result = JSON.parse(xhr.responseText);
-        console.log(result);
         document.getElementsByClassName('conteudo')[0].style.display = 'none';
         document.getElementById('resultado').innerHTML = JSON.stringify(result.tipos);
+        document.getElementById('resultado2').innerHTML = '<div class="chartCard"><div class="chartBox"><canvas id="myChart"></canvas></div></div>'
+        
+        const ctx = document.getElementById('myChart');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
       }
     };
     if (!cidade && !tipo) {

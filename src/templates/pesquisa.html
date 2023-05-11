@@ -27,18 +27,18 @@
 
         <select id="topico" name="filtro">
             <option value="">Selecione um tópico de pesquisa</option>
-            <option value="hospitalizacao">Hospitalização</option>
+            <option value="internações">Hospitalização</option>
             <option value="vacinação">Vacinação</option>
-            <option value="investimentos">Investimentos</option>
-            <option value="procedimentos">Procedimentos</option>
-            <option value="consultas">Consultas</option>
-            <option value="medicamentos">Medicamentos</option>
-            <option value="saude_mental">Saúde Mental</option>
+            <option value="gastos">Investimentos</option>
+            <option value="procedimento">Procedimentos</option>
+            <option value="consulta">Consultas</option>
+<!--            <option value="medicamentos">Medicamentos</option> -->
+            <option value="antidepressivo">Saúde Mental</option>
         </select> 
     </div>
 
     <div class="grid-container-btn">
-        <button type="submit" onclick="filtrar()" id="filtrar-btn">
+        <button type="button" onclick="filtrar()" id="filtrar-btn">
             Filtrar
         </button>
     </div>
@@ -58,13 +58,9 @@
     </div>
 </div>
 
-<div id="resultado">
-    <!-- Inicio gráficos -->
-    <div class="chartCard">
-        <div class="chartBox">
-          <canvas id="myChart"></canvas>
-        </div>
-    </div>
-</div>
+<div id="resultado"></div>
+
+<!-- Inicio gráficos -->    
+<div id="resultado2"></div>
 
 {% endblock %} 

@@ -10,21 +10,27 @@ result = {
 */
 
 function filtrar() {
-    cidade = document.querySelector('#cidade').value;
-    tipo = document.querySelector('#topico').value;
-    filtro = { cidade, tipo };
-    xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        result = JSON.parse(xhr.responseText);
-        document.getElementsByClassName('conteudo')[0].style.display = 'none';
-        document.getElementById('resultado').innerHTML = JSON.stringify(result.tipos);
-        document.getElementById('resultado2').innerHTML = '<div class="chartCard"><div class="chartBox"><canvas id="myChart1"></canvas></div></div>'
-        
-        dado = result.tipos[0].dados[0]
+  cidade = document.querySelector('#cidade').value;
+  tipo = document.querySelector('#topico').value;
+  filtro = { cidade, tipo };
+  xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      result = JSON.parse(xhr.responseText);
+      document.getElementsByClassName('conteudo')[0].style.display = 'none';
+      document.getElementById('resultado').innerHTML = JSON.stringify(result.tipos);
 
-        const ctx = document.getElementById('myChart1').getContext('2d');
-        new Chart(ctx, {
+      for (let i = 0; i < result.tipos.length; i++) {
+        const tipo = result.tipos[i];
+        for (let j = 0; j < tipo.dados.length; j++) {
+          const dado = tipo.dados[j];
+          const chartId = `Chart${i + j + 2}`;
+          const chartContainer = document.createElement('div');
+          chartContainer.className = 'chartCard';
+          chartContainer.innerHTML = `<div class="chartBox"><canvas id="${chartId}"></canvas></div>`;
+          document.getElementById('resultado').appendChild(chartContainer);
+          const ctx = document.getElementById(chartId).getContext('2d');
+          new Chart(ctx, {
             type: 'bar',
             data: {
               labels: ['Primeira dose', 'Segunda dose', '1° reforço', '2° reforço', '3° reforço', 'Dose única', 'Dose adicional'],
@@ -34,8 +40,8 @@ function filtrar() {
                   `${dado['terceira reforço']}`, `${dado['dose única']}`, `${dado['dose adicional']}`],
                 borderWidth: 1,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                      borderColor: 'rgba(255, 99, 132, 1)',
-                      borderWidth: 1
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
               }]
             },
             options: {
@@ -45,18 +51,20 @@ function filtrar() {
                 }
               }
             }
-          });       
+          });
+        }
       }
-    };
-    if (!cidade && !tipo) {
-      alert('Preencha algum campo');
-    } else {
-      xhr.open('POST', 'http://localhost:5000/filtrar', true);
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-      xhr.send(JSON.stringify(filtro));
     }
-}
+  };
 
+  if (!cidade && !tipo) {
+    alert('Preencha algum campo');
+  } else {
+    xhr.open('POST', 'http://localhost:5000/filtrar', true);
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    xhr.send(JSON.stringify(filtro));
+  }
+}
 function createCharts(tipo, dados) {
 }
 

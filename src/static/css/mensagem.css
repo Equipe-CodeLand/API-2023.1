@@ -1,0 +1,11 @@
+.mensagem{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 15%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

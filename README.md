@@ -35,37 +35,49 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 <h5> 1. Certifique de ter python 3.7 ou superior instalado em sua máquina, caso não tenha, <a href="https://www.python.org/downloads/" target="_blank"> clique aqui </a> </h5>
 
-<h5> 1.1 Certifque de ter o mysql 8.0 ou superior instalado em sua máquina, caso não tenha, <a href="https://dev.mysql.com/downloads/workbench/" target="_blank"> clique aqui </a> </h5>
+<h5> 2. Certifque de ter o mysql 8.0 ou superior instalado em sua máquina, caso não tenha, <a href="https://dev.mysql.com/downloads/workbench/" target="_blank"> clique aqui </a> </h5>
 
-<h5> 2. Abra o terminal do seu disposivo. </h5>
+<h6> 2.1. Recomendamos o uso da senha "12345", que já esta predefinida no arquivo app.py, mas você pode alterá-la de acordo com sua senha MySQL. </h6>
 
-<h5> 3. Clone o repositório utilizando este comando: </h5>
+<h5> 3. Abra o terminal do seu disposivo. </h5>
+
+<h5> 4. Clone o repositório utilizando este comando: </h5>
 
     git clone https://github.com/Equipe-01-DSM-2023/API-2023.1.git 
 
-<h5> 4. Entre na pasta src utilizando o comando: </h5>
+<h5> 5. Entre na pasta src utilizando o comando: </h5>
 
     cd API-2023.1/src 
 
-<h5> 5. Utilize estes comandos para criar o ambiente virtual. </h5>
+<h5> 6. Utilize estes comandos para criar o ambiente virtual. </h5>
 
     python -m venv venv
     .\venv\Scripts\activate
     pip install -r requirements.txt
     
-<h5> 5.1 Caso esteja usando alguma versão do linux, utilize estes comandos. </h5>
+<h6> 6.1. Caso esteja usando alguma versão do linux, utilize estes comandos. </h6>
 
     python3 -m venv venv
     source venv\bin\activate
     pip install -r requirements.txt
+    
+<h5> 7. Antes de executar, verifique se a senha do arquivo app.py (localizado dentro da pasta src) coincide com sua senha do MySQL (definimos por padrão "12345", você pode alterá-la de acordo com a senha definida na instalação do MySQL). </h5>
+    
+    #Defina a senha abaixo de acordo com seu MySQL:
+    app.config["MYSQL_PASSWORD"] = "12345"
+    
+<h6> 7.1. Exemplo: Digamos que sua senha do MySQL seja " abacate ", você substiuirá a senha por: </h6>
+    
+    #Defina a senha abaixo de acordo com seu MySQL:
+    app.config["MYSQL_PASSWORD"] = "abacate"
 
-<h5> 6. Execute a aplicação com o comando: </h5>
+<h5> 8. Execute a aplicação com o comando: </h5>
     
     flask run
 
-<h5> 7. Agora, abra o seguinte link no navegador de sua preferência: http://127.0.0.1:5000 </h5>
+<h5> 9. Agora, abra o seguinte link no navegador de sua preferência: http://127.0.0.1:5000 </h5>
 
-<h5> 8. Após utilizar o site, utilize esse comando no terminal para fechar o ambiente virtual:
+<h5> 10. Após utilizar o site, utilize esse comando no terminal para fechar o ambiente virtual:
 
     deactivate
  
@@ -94,28 +106,33 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 | SPRINTS |                 TAREFAS                 |                                                     DESCRIÇÃO                                                     | STATUS |
 | :-----: | :-------------------------------------: | :---------------------------------------------------------------------------------------------------------------: | :----: |
-|    1   | Pesquisa consultas                      | Pesquisar sobre consulta realizadas no periodo entre 2019 e 2022.                                                  |   ✔️   |
-|    1   | Pesquisa covid-longa                    | Pesquisar sobre covid-longa e seus sintomas.                                                                       |   ✔️   |
-|    1   | Pesquisa financeira                     | Pesquisar sobre investimentos e gastos com a pandemia nos estados escolhidos, durante o periodo de 2019 até 2022.  |   ✔️   |
-|    1   | Pesquisa medicamentos                   | Pesquisar sobre medicamentos utilizados contra acovid e covid-longa durante a pandemia.                            |   ✔️   |
-|    1   | Pesquisa procedimentos                  | Pesquisar sobre procedimentos realizados contra a covid e covid longa durante o período de 2019 até 2022.          |   ✔️   |
-|    1   | Pesquisa saúde-mental                   | Pesquisar sobre a venda de  medicamentos relacionados com depressão durante a pandemia.                            |   ✔️   |
-|    1   | Pesquisa tratamentos                    | Pesquisar sobre hospitalizações e vacinações durante a pandemia.                                                   |   ✔️   |
-|    2   | Flask                                   | Organização e criação do necessário para desenvolver as páginas no FLASK.                                          |   ✔️   |
-|    2   | Desenvolver barra de navegação e rodapé | Desenvolvimento do CSS padrão para as páginas.                                                                     |   ✔️   |
-|    2   | Informações no protótipo                | Adicionar ao FIGMA, os textos, gráfico e informações que estarão no site.                                          |   ✔️   |
-|    2   | Protótipo navegável - base (flask)      | Desenvolver uma base do protótipo para ser usada em outras páginas.                                                |   ✔️   |
-|    2   | Protótipo navegável - Pesquisa          | Utilizar a base  do protótipo para desenvolver a página "pesquisa".                                                |   ✔️   |
-|    2   | Protótipo navegável - sobre o projeto   | Utilizar a base do protótipo para desenvolver a página "sobre o projeto".                                          |   ✔️   |
-|    2   | Desenvolver a logo                      | Criar uma logo para o site do projeto.                                                                             |   ✔️   |
-|    2   | Controle de versões                     | Adicionar Tags ao que já foi feito e ao final da sprint.                                                           |   ✔️   |
-|    3   | Formulário para feedbacks               | Adiconar um formulário para feedbacks do usuário na página Sobre                                                   |   ✔️   |
-|    3   | Banco de dados para feedbacks           | Desenvolver um Banco de Dados MySql para armazenas as mensagens enviadas                                           |   ✔️   |
-|    3   | Integrar o banco ao site                | Vincular o Banco de Dados ao formulário através de python                                                          |   ✔️   |
-|    3   | Filtros                                 | Adição dos filtros na página Pesquisa                                                                              |   ❌   |
-|    3   | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                         |   ✔️   |
-|    4   | Testes Finais                           | Assegurar que o Banco de Dados e todas as funcionalidades estão de acordo.                                         |   ❌   |
-|    4   | Pop-Up                                  | Mensagem personalizada emitida ao enviar o formulário de feedbacks                                                 |   ❌   |
+|    1    | Pesquisa consultas                      | Pesquisar sobre consulta realizadas no periodo entre 2019 e 2022.                                                 |   ✔️  |
+|    1    | Pesquisa covid-longa                    | Pesquisar sobre covid-longa e seus sintomas.                                                                      |   ✔️  |
+|    1    | Pesquisa financeira                     | Pesquisar sobre investimentos e gastos com a pandemia nos estados escolhidos, durante o periodo de 2019 até 2022. |   ✔️  |
+|    1    | Pesquisa medicamentos                   | Pesquisar sobre medicamentos utilizados contra acovid e covid-longa durante a pandemia.                           |   ✔️  |
+|    1    | Pesquisa procedimentos                  | Pesquisar sobre procedimentos realizados contra a covid e covid longa durante o período de 2019 até 2022.         |   ✔️  |
+|    1    | Pesquisa saúde-mental                   | Pesquisar sobre a venda de  medicamentos relacionados com depressão durante a pandemia.                           |   ✔️  |
+|    1    | Pesquisa tratamentos                    | Pesquisar sobre hospitalizações e vacinações durante a pandemia.                                                  |   ✔️  |
+|    2    | Flask                                   | Organização e criação do necessário para desenvolver as páginas no FLASK.                                         |   ✔️  |
+|    2    | Desenvolver barra de navegação e rodapé | Desenvolvimento do CSS padrão para as páginas.                                                                    |   ✔️  |
+|    2    | Informações no protótipo                | Adicionar ao FIGMA, os textos, gráfico e informações que estarão no site.                                         |   ✔️  |
+|    2    | Protótipo navegável - base (flask)      | Desenvolver uma base do protótipo para ser usada em outras páginas.                                               |   ✔️  |
+|    2    | Protótipo navegável - Pesquisa          | Utilizar a base  do protótipo para desenvolver a página "pesquisa".                                               |   ✔️  |
+|    2    | Protótipo navegável - sobre o projeto   | Utilizar a base do protótipo para desenvolver a página "sobre o projeto".                                         |   ✔️  |
+|    2    | Desenvolver a logo                      | Criar uma logo para o site do projeto.                                                                            |   ✔️  |
+|    2    | Controle de versões                     | Adicionar Tags ao que já foi feito e ao final da sprint.                                                          |   ✔️  |
+|    3    | Estudo de Python 3                      | Estudo de como será feita a integração do banco de dados com o site através do Python3                            |   ✔️  |
+|    3    | Criar arquivos CSV                      | Transformar os dados arrecadados no excel para .CSV                                                               |   ✔️  |
+|    3    | Raspagem de dados                       | Implementar a raspagem de dados dos arquivos .CSV                                                                 |   ✔️  |
+|    3    | Pesquisa medicamentos                   | Complementar a pesquisa sobre medicamentos, de acordo com o que foi citado na reunião com o Jornalista            |   ✔️  |
+|    3    | Pesquisa tratamentos covid longa        | Pesquisar sobre como são tratados os sintomas da covid-long                                                       |   ✔️  |
+|    3    | Formulário para feedbacks               | Adiconar um formulário para feedbacks do usuário na página Sobre                                                  |   ✔️  |
+|    3    | Banco de dados para feedbacks           | Desenvolver um Banco de Dados MySql para armazenas as mensagens enviadas                                          |   ✔️  |
+|    3    | Integrar o banco ao site                | Vincular o Banco de Dados ao formulário através de python                                                         |   ✔️  |
+|    3    | Filtros                                 | Adição dos filtros na página Pesquisa                                                                             |   ❌  |
+|    3    | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                        |   ✔️  |
+|    4    | Testes Finais                           | Assegurar que o Banco de Dados e todas as funcionalidades estão de acordo.                                        |   ❌  |
+|    4    | Pop-Up                                  | Mensagem personalizada emitida ao enviar o formulário de feedbacks                                                |   ❌  |
 
 
 <br>

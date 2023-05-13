@@ -28,7 +28,7 @@ def filtrar_csv(cidade, tipo_dado):
         if cidade.lower() == linha[colunas.index('cidade')].lower():
             dado = {}
             for c in colunas:
-                dado[c] = linha[colunas.index(c)]
+                dado[c] = linha[colunas.index(c)].replace(',', '.')
             dados.append(dado)
     tipo['dados'] = dados
     csv.close()

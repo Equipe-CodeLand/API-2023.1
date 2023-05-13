@@ -19,7 +19,6 @@ function filtrar() {
       result = JSON.parse(xhr.responseText);
       document.getElementsByClassName('conteudo')[0].style.display = 'none';
       document.getElementById('resultado').innerHTML = JSON.stringify(result.tipos);
-      console.log(result)
 
       for (let i = 0; i < result.tipos.length; i++) {
         const tipo = result.tipos[i];
@@ -135,7 +134,6 @@ function filtrar() {
                 chartContainer.innerHTML = `<div class="chartBox"><canvas id="${chartId}"></canvas></div>`;
                 document.getElementById('resultado').appendChild(chartContainer);
                 const ctx = document.getElementById(chartId).getContext('2d');
-                console.log(dadosTopico)
                 new Chart(ctx, {
                   type: 'bar',
                   data: {

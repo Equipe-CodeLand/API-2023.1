@@ -1,19 +1,35 @@
 #filtro = {
-#    "cidades": ['São José dos Campos'],
-#    "anos": ['2020', '2021'],
-#    "tipo_dado": "vacinação"
+#    "cidade": 'São José dos Campos',
+#    "tipo": "vacinação"
 #    }
 
-def pesquisar(filtro):
-    csv = open('../docs/Arquivos CSV/' + filtro["tipo_dado"] + ".csv")
+topicos = ['antidepressivo', 'consulta', 'gastos', 'internações', 'procedimento', 'vacinação']
+
+def pesquisar_csv(filtro):
+    retorno = {
+        "tipos": []
+    }
+    if(filtro['tipo']):            
+        retorno['tipos'].append(filtrar_csv(filtro['cidade'], filtro['tipo']))
+    else:
+        for t in topicos:
+            retorno['tipos'].append(filtrar_csv(filtro['cidade'], t))
+    return retorno
+
+def filtrar_csv(cidade, tipo_dado):
+    csv = open('../docs/Arquivos_CSV/' + tipo_dado + ".csv")
     colunas = csv.readline().split('\n')[0].split(';')
-    filtro['cidades'] = list(map(str.lower, filtro['cidades']))
+    tipo = {
+        "tipo": tipo_dado
+        }
     dados = []
     for l in csv:
         linha = l.split('\n')[0].split(';')
-        if (len(filtro["cidades"]) == 0 or filtro["cidades"].count(linha[colunas.index("cidade")].lower()) > 0)\
-           and (len(filtro["anos"]) == 0 or filtro["anos"].count(linha[colunas.index("ano")]) > 0):
-            dados.insert(-1, linha)
+        if cidade.lower() == linha[colunas.index('cidade')].lower():
+            dado = {}
+            for c in colunas:
+                dado[c] = linha[colunas.index(c)].replace(',', '.')
+            dados.append(dado)
+    tipo['dados'] = dados
     csv.close()
-    dados.sort()
-    return colunas, dados
+    return tipo

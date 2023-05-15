@@ -18,7 +18,7 @@ function filtrar() {
     if (this.readyState == 4 && this.status == 200) {
       result = JSON.parse(xhr.responseText);
       document.getElementsByClassName('conteudo')[0].style.display = 'none';
-      document.getElementById('resultado').innerHTML = JSON.stringify(result.tipos);
+      document.getElementById('resultado').innerHTML = '';
 
       for (let i = 0; i < result.tipos.length; i++) {
         const tipo = result.tipos[i];

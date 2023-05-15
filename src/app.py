@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS, cross_origin
 from pesquisa import *
-from flask_mysqldb import MySQL
+# from flask_mysqldb import MySQL
 #import pandas
 
 app = Flask(__name__)
@@ -27,27 +27,27 @@ dados = [
 
 ]
 
-app.config["MYSQL_Host"] = "localhost"
-app.config["MYSQL_USER"] = "root"
-#Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "12345"
-mysql = MySQL(app)
+# app.config["MYSQL_Host"] = "localhost"
+# app.config["MYSQL_USER"] = "root"
+# #Defina a senha abaixo de acordo com seu MySQL:
+# app.config["MYSQL_PASSWORD"] = "12345"
+# mysql = MySQL(app)
 
-with app.app_context():
-    cur = mysql.connection.cursor()
-    cur.execute('''
-        CREATE DATABASE IF NOT EXISTS api_2023_1;
-        USE api_2023_1;
-        CREATE TABLE IF NOT EXISTS feedback (
-            codigo INT AUTO_INCREMENT PRIMARY KEY,
-            email VARCHAR(60),
-            comentario VARCHAR(255),
-            data_envio DATETIME NOT NULL DEFAULT NOW()
-        );
-    ''')
-    cur.close()
+# with app.app_context():
+#     cur = mysql.connection.cursor()
+#     cur.execute('''
+#         CREATE DATABASE IF NOT EXISTS api_2023_1;
+#         USE api_2023_1;
+#         CREATE TABLE IF NOT EXISTS feedback (
+#             codigo INT AUTO_INCREMENT PRIMARY KEY,
+#             email VARCHAR(60),
+#             comentario VARCHAR(255),
+#             data_envio DATETIME NOT NULL DEFAULT NOW()
+#         );
+#     ''')
+#     cur.close()
 
-app.config["MYSQL_DB"] = "api_2023_1"
+# app.config["MYSQL_DB"] = "api_2023_1"
 
 @app.route('/')
 def home():
@@ -75,16 +75,16 @@ def pesquisa():
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():
-    if request.method == "POST":
-        email = request.form["email"]
-        comentario = request.form["comentario"]
+    # if request.method == "POST":
+    #     email = request.form["email"]
+    #     comentario = request.form["comentario"]
 
-        cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
-        mysql.connection.commit()
-        cur.close()
+    #     cur = mysql.connection.cursor()
+    #     cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
+    #     mysql.connection.commit()
+    #     cur.close()
 
-        return "Muito obrigado! Seu feedback foi enviado com sucesso!"
+    #     return "Muito obrigado! Seu feedback foi enviado com sucesso!"
     return render_template('sobre.html')
 
 @app.route("/cacapava")

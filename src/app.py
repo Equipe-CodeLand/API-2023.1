@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS, cross_origin
 from pesquisa import *
+from flask_mysqldb import MySQL
+#import pandas
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -25,10 +27,32 @@ dados = [
 
 ]
 
+app.config["MYSQL_Host"] = "localhost"
+app.config["MYSQL_USER"] = "root"
+#Defina a senha abaixo de acordo com seu MySQL:
+app.config["MYSQL_PASSWORD"] = "12345"
+mysql = MySQL(app)
+
+with app.app_context():
+    cur = mysql.connection.cursor()
+    cur.execute('''
+        CREATE DATABASE IF NOT EXISTS api_2023_1;
+        USE api_2023_1;
+        CREATE TABLE IF NOT EXISTS feedback (
+            codigo INT AUTO_INCREMENT PRIMARY KEY,
+            email VARCHAR(60),
+            comentario VARCHAR(255),
+            data_envio DATETIME NOT NULL DEFAULT NOW()
+        );
+    ''')
+    cur.close()
+
+app.config["MYSQL_DB"] = "api_2023_1"
+
 @app.route('/')
 def home():
     title = "Home"
-    return render_template('index.html', title = title)
+    return render_template('home.html', title = title)
 
 @app.route('/filtrar', methods=['POST'])
 @cross_origin(supports_credentials=True)
@@ -38,14 +62,30 @@ def pesquisar():
 
 @app.route('/pesquisa', methods=['POST','GET'])
 def pesquisa():
+    if request.method == "POST":
+        cidade = request.form['cidade']
+        topico = request.form['topico']
+        #filtrado = dados[(dados.cidade == cidade) & (dados.topico == topico)]
+        title = "Resultado"
+        return render_template('resultado.html', cidade=cidade, topico=topico, title = title)
     title = "Pesquisas"
     return render_template('pesquisa.html', title=title)
 
 
-@app.route('/sobre')
+
+@app.route('/sobre', methods=["GET", "POST"])
 def sobre():
-    title = "Sobre o Projeto"
-    return render_template('sobre.html', title = title)
+    if request.method == "POST":
+        email = request.form["email"]
+        comentario = request.form["comentario"]
+
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
+        mysql.connection.commit()
+        cur.close()
+
+        return "Muito obrigado! Seu feedback foi enviado com sucesso!"
+    return render_template('sobre.html')
 
 @app.route("/cacapava")
 def cacapava():
@@ -67,52 +107,6 @@ def jac():
     title = "Jacareí"
     return render_template('jac.html', title = title)
 
-@app.route("/ccpv_consultas")
-def ccpv_con():
-    title = "Consultas Caçapava"
-    return render_template("ccpv_consultas.html",title=title)
 
-@app.route("/ccpv_gastos")
-def ccpv_gastos():
-    title = "Gastos Caçapava"
-    return render_template("ccpv_gastos.html",title=title)
-
-@app.route("/ccpv_medicamentos")
-def ccpv_medicamentos():
-    title = "Medicamentos Caçapava"
-    return render_template("ccpv_medicamentos.html",title=title)
-
-@app.route("/ccpv_procedimentos")
-def ccpv_proc():
-    title = "Procedimentos Caçapava"
-    return render_template("ccpv_procedimentos.html",title=title)
-
-@app.route("/ccpv_tratamentos")
-def ccpv_trat():
-    title = "Tratamentos Caçapava"
-    return render_template("ccpv_tratamentos.html",title=title)
-
-@app.route("/sjc_consultas")
-def sjc_1():
-    title = "SJC consultas"
-    return render_template("sjc_consultas.html",title=title)
-
-@app.route("/sjc_gastos")
-def sjc_2():
-    title = "SJC gastos"
-    return render_template("sjc_gastos.html",title=title)
-
-@app.route("/sjc_medicamentos")
-def sjc_3():
-    title = "SJC medicamentos"
-    return render_template("sjc_medicamentos.html",title=title)
-
-@app.route("/sjc_procedimentos")
-def sjc_4():
-    title = "SJC procedimentos"
-    return render_template("sjc_procedimentos.html",title=title)
-
-@app.route("/sjc_tratamentos")
-def sjc_5():
-    title = "SJC tratamentos"
-    return render_template("sjc_tratamentos.html",title=title)
+if __name__ == "__main__":
+    app.run(debug=True)

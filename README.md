@@ -1,4 +1,5 @@
 <!-- Para melhor visualização do código, tire a quebra de linha automatica. -->
+<br id="topo">
 
 <h1> FATEC Profº Jessen Vidal - São José dos Campos - 1º Semestre DSM </h1>
 Projeto desenvolvido para a API (Aprendizagem por Projeto Integrado) do 1° semestre de Desenvolvimento de Software Multiplataforma (DSM) em parceria com a Vanguarda sobre dados relacionados à covid longa no Vale do Paraíba para um site de uso jornalístico.
@@ -97,8 +98,8 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 | :----: | :--------: | :--------: | :---------------------------------------------------------------------------------: | :----: |
 |   01   | 13/03/2023 | 02/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V1.0">Relatório</a>  |    ✔️   |
 |   02   | 03/04/2023 | 23/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V2.0">Relatório</a>  |    ✔️   |
-|   03   | 24/04/2023 | 14/05/2023 |                                                                                     |   ⏳️   |
-|   04   | 15/05/2023 | 14/06/2023 |                                                                                     |        |
+|   03   | 24/04/2023 | 14/05/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V3.0">Relatório</a>  |    ✔️   |
+|   04   | 15/05/2023 | 14/06/2023 | Em andamento                                                                        |  ⏳     |
 
 <br>
 
@@ -129,8 +130,8 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 |    3    | Formulário para feedbacks               | Adiconar um formulário para feedbacks do usuário na página Sobre                                                  |   ✔️  |
 |    3    | Banco de dados para feedbacks           | Desenvolver um Banco de Dados MySql para armazenas as mensagens enviadas                                          |   ✔️  |
 |    3    | Integrar o banco ao site                | Vincular o Banco de Dados ao formulário através de python                                                         |   ✔️  |
-|    3    | Filtros                                 | Adição dos filtros na página Pesquisa                                                                             |   ❌  |
-|    3    | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                        |   ✔️  |
+|    3    | Filtros                                 | Adição dos filtros na página Pesquisa                                                                             |   ✔️  |
+|    4    | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                        |  ❌   |
 |    4    | Testes Finais                           | Assegurar que o Banco de Dados e todas as funcionalidades estão de acordo.                                        |   ❌  |
 |    4    | Pop-Up                                  | Mensagem personalizada emitida ao enviar o formulário de feedbacks                                                |   ❌  |
 
@@ -207,4 +208,4 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
     
 <br>
 
-→ [Voltar ao topo](#fatec-profº-jessen-vidal-sjc---1º-semestre-dsm)
+<a href="#topo">[Voltar ao topo]</a>

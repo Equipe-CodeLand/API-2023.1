@@ -1,4 +1,5 @@
 <!-- Para melhor visualização do código, tire a quebra de linha automatica. -->
+<br id="topo">
 
 <h1> FATEC Profº Jessen Vidal - São José dos Campos - 1º Semestre DSM </h1>
 Projeto desenvolvido para a API (Aprendizagem por Projeto Integrado) do 1° semestre de Desenvolvimento de Software Multiplataforma (DSM) em parceria com a Vanguarda sobre dados relacionados à covid longa no Vale do Paraíba para um site de uso jornalístico.
@@ -207,4 +208,4 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
     
 <br>
 
-→ [Voltar ao topo](#fatec-profº-jessen-vidal-sjc---1º-semestre-dsm)
+<a href="#topo">[Voltar ao topo]</a>

@@ -24,26 +24,30 @@ main {
     margin-bottom: 30px;
 }
 
+.left-box #image {
+    display: none;
+}
+
 .right-box {
     align-content: center;
     display: grid;
 }
 
-.right-box #image {
+#image {
     position: relative;
     margin: auto;
     height: 400px;
     width: 400px;
 }
 
-.right-box #image #covid_verde {
+#image #covid_verde {
     position: absolute;
     width: 250px;
     left: 0px;
     top: 0px;
 }
 
-.right-box #image #covid_rosa {
+#image #covid_rosa {
     position: absolute;
     width: 140px;
     left: 200px;
@@ -91,6 +95,27 @@ main {
 @media (max-width: 1000px) {
     #content_1 {
         grid-template-columns: 100%;
+    }
+
+    .left-box #image {
+        margin: 0px auto 30px;
+        display: block;
+        height: 135px;
+        width: 200px;
+    }
+    
+    .left-box #image #covid_verde {
+        position: absolute;
+        width: 125px;
+        left: 0px;
+        top: 0px;
+    }
+    
+    .left-box #image #covid_rosa {
+        position: absolute;
+        width: 70px;
+        left: 130px;
+        top: 65px;
     }
 
     .right-box {

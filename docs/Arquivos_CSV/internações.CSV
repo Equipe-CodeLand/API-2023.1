@@ -1,21 +1,33 @@
-cidade;ano;hospitalização covid-19;internações geral
-Caçapava;2019; - ;2767,00
-Caçapava;2020;282;2804,00
-Caçapava;2021;749;3075,00
-Caçapava;2022; não encontrado ;3172,00
-Caçapava;total;1.031;11818,00
-Jacareí;2019; - ;12888,00
-Jacareí;2020;710;11767,00
-Jacareí;2021;1.994;12700,00
-Jacareí;2022; não encontrado ;13433,00
-Jacareí;total;2.704;50788,00
-São josé dos campos;2019; - ;47638,00
-São josé dos campos;2020;2.381;42351,00
-São josé dos campos;2021;5.012;44754,00
-São josé dos campos;2022; não encontrado ;48591,00
-São josé dos campos;total;7.393;183334,00
-Taubaté;2019; - ;21075,00
-Taubaté;2020;412;18756,00
-Taubaté;2021;2.279;20388,00
-Taubaté;2022; não encontrado ;22750,00
-Taubaté;total;2.691;82969,00
+cidade;tópico;ano;valor
+Caçapava;hospitalização covid-19;2019; - 
+Caçapava;hospitalização covid-19;2020;282
+Caçapava;hospitalização covid-19;2021;749
+Caçapava;hospitalização covid-19;2022; - 
+Caçapava;internações geral;2019;2767,00
+Caçapava;internações geral;2020;2804,00
+Caçapava;internações geral;2021;3075,00
+Caçapava;internações geral;2022;3172,00
+Jacareí;hospitalização covid-19;2019; - 
+Jacareí;hospitalização covid-19;2020;710
+Jacareí;hospitalização covid-19;2021;1994
+Jacareí;hospitalização covid-19;2022; -
+Jacareí;internações geral;2019;12888,00
+Jacareí;internações geral;2020;11767,00
+Jacareí;internações geral;2021;12700,00
+Jacareí;internações geral;2022;13433,00
+São josé dos campos;hospitalização covid-19;2019; - 
+São josé dos campos;hospitalização covid-19;2020;2381
+São josé dos campos;hospitalização covid-19;2021;5012
+São josé dos campos;hospitalização covid-19;2022; -
+São josé dos campos;internações geral;2019;47638,00
+São josé dos campos;internações geral;2020;42351,00
+São josé dos campos;internações geral;2021;44754,00
+São josé dos campos;internações geral;2022;48591,00
+Taubaté;hospitalização covid-19;2019; - 
+Taubaté;hospitalização covid-19;2020;412
+Taubaté;hospitalização covid-19;2021;2279
+Taubaté;hospitalização covid-19;2022; -
+Taubaté;internações geral;2019;21075,00
+Taubaté;internações geral;2020;18756,00
+Taubaté;internações geral;2021;20388,00
+Taubaté;internações geral;2022;22750,00

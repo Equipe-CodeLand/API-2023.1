@@ -15,10 +15,12 @@ header {
     display: grid;
     grid-template-columns: 45% 55%;
     align-items: center;
+    justify-content: center;
     border-bottom: 3px solid #202020;
     padding: 5px;
-    height: 80px;
+    height: 85px;
 }
+
 
 header div#left-box {
     /* background-color: yellowgreen; */
@@ -26,8 +28,9 @@ header div#left-box {
 }
 
 header div#left-box img {
-    width: 10%;
+    width: 80px;
 }
+
 
 header nav ul {
     /* background-color: yellow; */
@@ -44,13 +47,13 @@ header nav ul li {
 
 header nav ul li a {
     color: #202020;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 600;
     transition: 0.3s;
 }
 
 header nav ul li a:hover {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 footer {
@@ -58,31 +61,53 @@ footer {
     padding: 20px 0px;
     text-align: center;
     font-family: "Inter", sans-serif;
-    margin-top: 7%;
+    bottom: 0;
 }
 
 footer a {
     color: #202020;
     font-weight: 600;
+    font-size: 1.3em;
 }
 
-footer a::before {
-    content: url(../img/github-logo_16px.png);
-    padding-right: 5px;
-}
 
 footer p {
+    font-size: 1.2em;
     margin-top: 10px;
     color: hsla(0, 0%, 13%, 0.8);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     header {
-        height: 60px;
         grid-template-columns: 40% 60%;
+        justify-content: center;
+        height: 60px;
+
     }
 
     header div#left-box img {
-        width: 20%;
+        width: 60px;
+    }
+}
+
+@media (min-width: 601px) {
+    header {
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    footer p {
+        font-size: 0.8em;
+    }
+
+    footer a {
+        font-size: 1em;
+    }
+
+    header nav ul li a {
+        font-size: 1em;
     }
 }

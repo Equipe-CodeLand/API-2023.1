@@ -29,7 +29,7 @@ dados = [
 app.config["MYSQL_Host"] = "localhost"
 app.config["MYSQL_USER"] = "root"
 #Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "fatec"
+app.config["MYSQL_PASSWORD"] = "12345"
 mysql = MySQL(app)
 with app.app_context():
      cur = mysql.connection.cursor()
@@ -83,7 +83,8 @@ def sobre():
          cur.close()
 
          return redirect(url_for('home'))
-    return render_template('sobre.html')
+    title = "Sobre o Projeto"
+    return render_template('sobre.html', title = title)
 
 @app.route("/cacapava")
 def cacapava():

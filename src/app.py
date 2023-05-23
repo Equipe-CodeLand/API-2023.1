@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, redirect, render_template, request, jsonify, url_for
 from flask_cors import CORS, cross_origin
 from pesquisa import *
 from flask_mysqldb import MySQL
@@ -82,7 +82,7 @@ def sobre():
          mysql.connection.commit()
          cur.close()
 
-         return render_template('mensagem.html')
+         return redirect(url_for('home'))
     return render_template('sobre.html')
 
 @app.route("/cacapava")

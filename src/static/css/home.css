@@ -44,7 +44,8 @@ div.content div.right-box {
 
 
 div.content#safe div.left-box ul {
-    padding-left: 0px;
+    padding-left: 15px;
+
 }
 
 div.content#safe div.left-box ul li {
@@ -70,11 +71,21 @@ main div#content_2 {
     /* background-color: aqua; */
     margin-top: 40px;
     margin-bottom: 20px;
-    padding: 0px 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     font-family: "Inter", sans-serif;
     font-size: 1em;
+    line-height: 30px;
     color: #202020;
 }
+
+@media (min-width: 600px) {
+    main div#content_2{
+        width: 60%;
+
+    }
+}
+
 
 @media (max-width: 600px) {
     main .content#text div.left-box {
@@ -88,4 +99,9 @@ main div#content_2 {
     main .content .right-box {
         display: none;
     }
+    div#content_2{
+        text-align: center;
+        margin-left: 0px;
+    }
+
 }

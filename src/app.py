@@ -26,26 +26,26 @@ dados = [
 
 ]
 
-app.config["MYSQL_Host"] = "localhost"
-app.config["MYSQL_USER"] = "root"
-#Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "12345"
-mysql = MySQL(app)
-with app.app_context():
-     cur = mysql.connection.cursor()
-     cur.execute('''
-         CREATE DATABASE IF NOT EXISTS api_2023_1;
-         USE api_2023_1;
-         CREATE TABLE IF NOT EXISTS feedback (
-             codigo INT AUTO_INCREMENT PRIMARY KEY,
-             email VARCHAR(60),
-             comentario VARCHAR(255),
-             data_envio DATETIME NOT NULL DEFAULT NOW()
-         );
-     ''')
-     cur.close()
+# app.config["MYSQL_Host"] = "localhost"
+# app.config["MYSQL_USER"] = "root"
+# #Defina a senha abaixo de acordo com seu MySQL:
+# app.config["MYSQL_PASSWORD"] = "7451"
+# mysql = MySQL(app)
+# with app.app_context():
+#      cur = mysql.connection.cursor()
+#      cur.execute('''
+#          CREATE DATABASE IF NOT EXISTS api_2023_1;
+#          USE api_2023_1;
+#          CREATE TABLE IF NOT EXISTS feedback (
+#              codigo INT AUTO_INCREMENT PRIMARY KEY,
+#              email VARCHAR(60),
+#              comentario VARCHAR(255),
+#              data_envio DATETIME NOT NULL DEFAULT NOW()
+#          );
+#      ''')
+#      cur.close()
 
-app.config["MYSQL_DB"] = "api_2023_1"
+# app.config["MYSQL_DB"] = "api_2023_1"
 
 @app.route('/')
 def home():
@@ -73,16 +73,16 @@ def pesquisa():
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():
-    if request.method == "POST":
-         email = request.form["email"]
-         comentario = request.form["comentario"]
+    # if request.method == "POST":
+    #      email = request.form["email"]
+    #      comentario = request.form["comentario"]
 
-         cur = mysql.connection.cursor()
-         cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
-         mysql.connection.commit()
-         cur.close()
+    #      cur = mysql.connection.cursor()
+    #      cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
+    #      mysql.connection.commit()
+    #      cur.close()
 
-         return redirect(url_for('home'))
+    #      return redirect(url_for('home'))
     title = "Sobre o Projeto"
     return render_template('sobre.html', title = title)
 

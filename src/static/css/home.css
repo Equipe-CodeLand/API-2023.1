@@ -48,12 +48,14 @@ div.content#safe div.left-box ul {
 
 }
 
+
 div.content#safe div.left-box ul li {
     font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: 1em;
     padding: 5px;
 }
+
 
 div.content#safe div.right-box {
     text-align: center;
@@ -79,7 +81,7 @@ main div#content_2 {
     color: #202020;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 660px) {
     main div#content_2{
         width: 60%;
 
@@ -87,7 +89,7 @@ main div#content_2 {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     main .content#text div.left-box {
         text-align: center;
     }
@@ -102,6 +104,10 @@ main div#content_2 {
     div#content_2{
         text-align: center;
         margin-left: 0px;
+    }
+
+    a{
+        word-break: break-all;
     }
 
 }

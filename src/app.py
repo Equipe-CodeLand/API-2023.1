@@ -29,7 +29,7 @@ dados = [
 app.config["MYSQL_Host"] = "localhost"
 app.config["MYSQL_USER"] = "root"
 #Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "12345"
+app.config["MYSQL_PASSWORD"] = "fatec"
 mysql = MySQL(app)
 with app.app_context():
      cur = mysql.connection.cursor()
@@ -69,7 +69,16 @@ def pesquisa():
     title = "Pesquisas"
     return render_template('pesquisa.html', title=title)
 
+@app.route('/feedbacks')
+def feedbacks():
+    cur = mysql.connection.cursor()
 
+    feedbacks = cur.execute("SELECT * FROM feedback")
+
+    if feedbacks > 0:
+        userDetails = cur.fetchall()
+
+        return render_template("feedbacks.html", userDetails=userDetails)
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():

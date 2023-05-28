@@ -62,6 +62,7 @@ footer {
     text-align: center;
     font-family: "Inter", sans-serif;
     bottom: 0;
+    flex-shrink: 0;
 }
 
 footer a {

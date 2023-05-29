@@ -89,7 +89,7 @@
     <section id="content_3">
         <br>
         <h1>Feedback:</h1>
-
+    
         <form method="post" action="/sobre" class="form-feedback" id="form-feedback">
             <label for="">Deixe aqui seu e-mail:</label><br>
             <input class="email" type="email" name="email" placeholder="Digite o email..." required>
@@ -101,11 +101,12 @@
         
             <br>
         
-            <input class="botao" type="button" value="Enviar" id="enviarBotao">
+            <div class="button-container">
+                <input class="botao" type="button" value="Enviar" id="enviarBotao">
+                <a href="/feedbacks" class="feedback-link">feedbacks</a>
+            </div>
         </form>
-        <div class="feedback">
-            <a href="/feedbacks">feedbacks</a>
-        </div>
+    
         <script>
             document.getElementById('enviarBotao').onclick = function () {
                 var email = document.querySelector('.email').value;
@@ -132,5 +133,6 @@
             };
         </script>
     </section>
+    
 </main>
 {% endblock %}

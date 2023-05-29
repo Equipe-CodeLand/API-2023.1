@@ -91,7 +91,9 @@ main div#content_2 {
 
 @media (max-width: 650px) {
     main .content#text div.left-box {
-        text-align: center;
+        text-align: start;
+        line-height: 30px;
+        font-size: 0.9em;
     }
 
     main .content {
@@ -102,12 +104,20 @@ main div#content_2 {
         display: none;
     }
     div#content_2{
-        text-align: center;
+        text-align: start;
+    }
+
+    p{
         margin-left: 0px;
+        line-height: 30px;
+        font-size: 0.9em;
     }
 
     a{
         word-break: break-all;
+        margin-left: 0px;
+        line-height: 30px;
+        font-size: 0.9em;
     }
 
 }

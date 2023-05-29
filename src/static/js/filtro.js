@@ -325,12 +325,23 @@ function filtrar() {
   };
 
   if (!cidade && !tipo) {
-    alert('Preencha algum campo');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Ops!',
+      text: 'Nenhum filtro selecionado, selecione um por favor!',
+    });
+  } else if (!cidade && tipo) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro!',
+      text: 'Para visualizar os gráficos favor selecionar a cidade de sua preferência',
+    });
   } else {
     xhr.open('POST', 'http://localhost:5000/filtrar', true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.send(JSON.stringify(filtro));
   }
+  
 }
 
 function capitalize(string) {

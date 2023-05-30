@@ -55,7 +55,6 @@ def home():
 @app.route('/filtrar', methods=['POST'])
 @cross_origin(supports_credentials=True)
 def pesquisar():
-    print(pesquisar_csv(request.get_json()))
     return pesquisar_csv(request.get_json())
 
 @app.route('/pesquisa', methods=['POST','GET'])

@@ -45,7 +45,7 @@ with app.app_context():
      ''')
      cur.close()
 
-app.config["MYSQL_DB"] = "api_2023_1"
+# app.config["MYSQL_DB"] = "api_2023_1"
 
 @app.route('/')
 def home():
@@ -74,15 +74,15 @@ def pesquisa():
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():
     if request.method == "POST":
-         email = request.form["email"]
-         comentario = request.form["comentario"]
+        email = request.form["email"]
+        comentario = request.form["comentario"]
 
-         cur = mysql.connection.cursor()
-         cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
-         mysql.connection.commit()
-         cur.close()
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
+        mysql.connection.commit()
+        cur.close()
 
-         return redirect(url_for('home'))
+        return redirect(url_for('home'))
     title = "Sobre o Projeto"
     return render_template('sobre.html', title = title)
 

@@ -44,8 +44,10 @@ div.content div.right-box {
 
 
 div.content#safe div.left-box ul {
-    padding-left: 0px;
+    padding-left: 15px;
+
 }
+
 
 div.content#safe div.left-box ul li {
     font-family: "Inter", sans-serif;
@@ -53,6 +55,7 @@ div.content#safe div.left-box ul li {
     font-size: 1em;
     padding: 5px;
 }
+
 
 div.content#safe div.right-box {
     text-align: center;
@@ -70,15 +73,27 @@ main div#content_2 {
     /* background-color: aqua; */
     margin-top: 40px;
     margin-bottom: 20px;
-    padding: 0px 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     font-family: "Inter", sans-serif;
     font-size: 1em;
+    line-height: 30px;
     color: #202020;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 660px) {
+    main div#content_2{
+        width: 60%;
+
+    }
+}
+
+
+@media (max-width: 650px) {
     main .content#text div.left-box {
-        text-align: center;
+        text-align: start;
+        line-height: 30px;
+        font-size: 0.9em;
     }
 
     main .content {
@@ -88,4 +103,21 @@ main div#content_2 {
     main .content .right-box {
         display: none;
     }
+    div#content_2{
+        text-align: start;
+    }
+
+    p{
+        margin-left: 0px;
+        line-height: 30px;
+        font-size: 0.9em;
+    }
+
+    a{
+        word-break: break-all;
+        margin-left: 0px;
+        line-height: 30px;
+        font-size: 0.9em;
+    }
+
 }

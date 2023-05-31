@@ -29,7 +29,7 @@ dados = [
 app.config["MYSQL_Host"] = "localhost"
 app.config["MYSQL_USER"] = "root"
 #Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "12345"
+app.config["MYSQL_PASSWORD"] = "fatec23"
 mysql = MySQL(app)
 with app.app_context():
      cur = mysql.connection.cursor()
@@ -45,7 +45,7 @@ with app.app_context():
      ''')
      cur.close()
 
-app.config["MYSQL_DB"] = "api_2023_1"
+# app.config["MYSQL_DB"] = "api_2023_1"
 
 @app.route('/')
 def home():
@@ -73,15 +73,15 @@ def pesquisa():
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():
     if request.method == "POST":
-         email = request.form["email"]
-         comentario = request.form["comentario"]
+        email = request.form["email"]
+        comentario = request.form["comentario"]
 
-         cur = mysql.connection.cursor()
-         cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
-         mysql.connection.commit()
-         cur.close()
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
+        mysql.connection.commit()
+        cur.close()
 
-         return redirect(url_for('home'))
+        return redirect(url_for('home'))
     title = "Sobre o Projeto"
     return render_template('sobre.html', title = title)
 

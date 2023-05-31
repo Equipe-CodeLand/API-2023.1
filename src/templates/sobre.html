@@ -101,14 +101,16 @@
         
             <br>
         
-            <input class="botao" type="button" value="Enviar" id="enviarBotao">
+            <input class="botao" type="submit" value="Enviar" id="enviarBotao">
         </form>
-        
+            
         <script>
-            document.getElementById('enviarBotao').onclick = function () {
+            document.getElementById('enviarBotao').onclick = function (event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+            
                 var email = document.querySelector('.email').value;
                 var comentario = document.querySelector('.comentario').value;
-        
+            
                 if (email.trim() === '' || comentario.trim() === '') {
                     Swal.fire(
                         "Erro!",
@@ -116,19 +118,21 @@
                         "error"
                     );
                 } else {
-                    Swal.fire(
-                        "Sucesso!",
-                        "As informações foram enviadas com sucesso!",
-                        "success"
-                    ).then((result) => {
+                    Swal.fire({
+                        title: "Confirmação",
+                        text: "Deseja enviar as informações?",
+                        icon: "question",
+                        showCancelButton: true,
+                        confirmButtonText: "Enviar",
+                        cancelButtonText: "Cancelar"
+                    }).then((result) => {
                         if (result.isConfirmed) {
-                            // Usuário confirmou, enviar o formulário
-                            document.getElementById('form-feedback').submit();
+                            document.getElementById('form-feedback').submit(); // Envia o formulário
                         }
                     });
                 }
             };
-        </script>
+        </script>       
     </section>
 </main>
 {% endblock %}

@@ -27,9 +27,9 @@ dados = [
 ]
 
 app.config["MYSQL_Host"] = "localhost"
-app.config["MYSQL_USER"] = "root"
+app.config["MYSQL_USER"] = "fatec"
 #Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "fatec23"
+app.config["MYSQL_PASSWORD"] = "P@ssword1234"
 mysql = MySQL(app)
 with app.app_context():
      cur = mysql.connection.cursor()

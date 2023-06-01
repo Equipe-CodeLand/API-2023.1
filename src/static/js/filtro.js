@@ -246,3 +246,8 @@ function criarGrafico(chartId, labels, label, data, title, fonte) {
       },
     }
   });
+}
+
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

@@ -86,7 +86,9 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 <h2> 🎯 MVP </h2>
 <h4> Este é nosso MVP para versão Desktop: </h4>
-<img src="/docs/wireframe gif/mvp.gif"/>
+<img src="/docs/wireframe gif/mvp_desktop.gif"/>
+<h4> Este é nosso MVP para a versão responsiva: </h4>
+<img src="/docs/wireframe gif/mvp_responsivo.gif"/>
 
 <br>
 

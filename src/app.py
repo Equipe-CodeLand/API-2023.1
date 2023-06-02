@@ -45,7 +45,7 @@ with app.app_context():
      ''')
      cur.close()
 
-# app.config["MYSQL_DB"] = "api_2023_1"
+app.config["MYSQL_DB"] = "api_2023_1"
 
 @app.route('/')
 def home():

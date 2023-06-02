@@ -89,18 +89,18 @@
     <section id="content_3">
         <br>
         <h1>Feedback:</h1>
-    
+
         <form method="post" action="/sobre" class="form-feedback" id="form-feedback">
             <label for="">Deixe aqui seu e-mail:</label><br>
             <input class="email" type="email" name="email" placeholder="Digite o email..." required>
-        
+
             <br>
-        
+
             <label for="">Deixe aqui seu comentário:</label><br>
             <textarea class="comentario" name="comentario" placeholder="Digite o seu comentário..." required></textarea>
-        
+
             <br>
-        
+
 
             <div class="button-container">
                 <input class="botao" type="button" value="Enviar" id="enviarBotao">
@@ -111,11 +111,24 @@
         <script>
             document.getElementById('enviarBotao').onclick = function (event) {
                 event.preventDefault(); // Impede o envio padrão do formulário
-            
+
                 var email = document.querySelector('.email').value;
                 var comentario = document.querySelector('.comentario').value;
-            
-                if (email.trim() === '' || comentario.trim() === '') {
+
+                // Verifica se o campo de email está vazio ou não possui o formato correto
+                if (String(email).length == 0) {
+                    Swal.fire(
+                        "Erro!",
+                        "Por favor, preencha todos os campos obrigatórios.",
+                        "error"
+                    );
+                } else if (!validateEmail(email)) {
+                    Swal.fire(
+                        "Erro!",
+                        "Por favor, insira um endereço de email válido.",
+                        "error"
+                    );
+                } else if (String(comentario).length == 0) {
                     Swal.fire(
                         "Erro!",
                         "Por favor, preencha todos os campos obrigatórios.",
@@ -136,8 +149,15 @@
                     });
                 }
             };
-        </script>       
+
+            // Função para validar o formato do email usando uma expressão regular
+            function validateEmail(email) {
+                var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+        </script>
+
     </section>
-    
+
 </main>
 {% endblock %}

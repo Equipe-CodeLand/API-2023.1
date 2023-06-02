@@ -73,7 +73,8 @@ def feedbacks():
     if feedbacks > 0:
         userDetails = cur.fetchall()
 
-        return render_template("feedbacks.html", userDetails=userDetails)
+        title = "Feedbacks"
+        return render_template("feedbacks.html", userDetails=userDetails, title=title)
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():

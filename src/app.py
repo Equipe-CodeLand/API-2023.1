@@ -28,8 +28,10 @@ dados = [
 
 app.config["MYSQL_Host"] = "localhost"
 app.config["MYSQL_USER"] = "root"
+
 #Defina a senha abaixo de acordo com seu MySQL:
 app.config["MYSQL_PASSWORD"] = "fatec23"
+
 mysql = MySQL(app)
 with app.app_context():
      cur = mysql.connection.cursor()
@@ -59,12 +61,6 @@ def pesquisar():
 
 @app.route('/pesquisa', methods=['POST','GET'])
 def pesquisa():
-    #if request.method == "POST":
-    #    cidade = request.form['cidade']
-    #    topico = request.form['topico']
-        #filtrado = dados[(dados.cidade == cidade) & (dados.topico == topico)]
-    #    title = "Resultado"
-    #    return render_template('resultado.html', cidade=cidade, topico=topico, title = title)
     title = "Pesquisas"
     return render_template('pesquisa.html', title=title)
 
@@ -90,30 +86,9 @@ def sobre():
         mysql.connection.commit()
         cur.close()
 
-        return redirect(url_for('home'))
+        return redirect(url_for('feedbacks'))
     title = "Sobre o Projeto"
     return render_template('sobre.html', title = title)
-
-@app.route("/cacapava")
-def cacapava():
-    title = "Caçapava"
-    return render_template('ccpv.html', title = title)
-
-@app.route("/sjc")
-def sjc():
-    title = "São José dos Campos"
-    return render_template('sjc.html', title = title)
-
-@app.route("/taubate")
-def tau():
-    title = "Taubaté"
-    return render_template('tau.html', title = title)
-
-@app.route("/jacarei")
-def jac():
-    title = "Jacareí"
-    return render_template('jac.html', title = title)
-
 
 if __name__ == "__main__":
     app.run(debug=True)

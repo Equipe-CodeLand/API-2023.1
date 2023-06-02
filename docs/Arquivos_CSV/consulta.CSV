@@ -1,41 +1,41 @@
 cidade;ano;tópico;dado
-Caçapava;2019;atenção básica;816931,00
-Caçapava;2019;média complexidade;300025,00
-Caçapava;2020;atenção básica;103374,00
-Caçapava;2020;média complexidade;186173,00
-Caçapava;2021;atenção básica;37004,00
-Caçapava;2021;média complexidade;239861,00
-Caçapava;2022;atenção básica;32309,00
-Caçapava;2022;média complexidade;289208,00
-São josé dos campos;2019;atenção básica;2104836,00
-São josé dos campos;2019;média complexidade;3480738,00
-São josé dos campos;2019;alta complexidade;3482,00
-São josé dos campos;2020;atenção básica;1864874,00
-São josé dos campos;2020;média complexidade;2850383,00
-São josé dos campos;2020;alta complexidade;2810,00
-São josé dos campos;2021;atenção básica;2197883,00
-São josé dos campos;2021;média complexidade;3702915,00
-São josé dos campos;2021;alta complexidade;2370,00
-São josé dos campos;2022;atenção básica;1932867,00
-São josé dos campos;2022;média complexidade;4188664,00
-São josé dos campos;2022;alta complexidade;2589,00
-Jacareí;2019;atenção básica;129328,00
-Jacareí;2019;média complexidade;982960,00
-Jacareí;2020;atenção básica;84537,00
-Jacareí;2020;média complexidade;658223,00
-Jacareí;2021;atenção básica;219730,00
-Jacareí;2021;média complexidade;901621,00
-Jacareí;2022;atenção básica;184203,00
-Jacareí;2022;média complexidade;1057554,00
-Taubaté;2019;atenção básica;1319165,00
-Taubaté;2019;média complexidade;1889552,00
-Taubaté;2019;alta complexidade;1212,00
-Taubaté;2020;atenção básica;861652,00
-Taubaté;2020;média complexidade;1249638,00
-Taubaté;2020;alta complexidade;1034,00
-Taubaté;2021;atenção básica;421308,00
-Taubaté;2021;média complexidade;1229143,00
-Taubaté;2021;alta complexidade;1143,00
-Taubaté;2022;atenção básica;413669,00
-Taubaté;2022;média complexidade;1947723,00
-Taubaté;2022;alta complexidade;1192,00
+Caçapava;2019;atenção básica;816931
+Caçapava;2019;média complexidade;300025
+Caçapava;2020;atenção básica;103374
+Caçapava;2020;média complexidade;186173
+Caçapava;2021;atenção básica;37004
+Caçapava;2021;média complexidade;239861
+Caçapava;2022;atenção básica;32309
+Caçapava;2022;média complexidade;289208
+São José dos Campos;2019;atenção básica;2104836
+São José dos Campos;2019;média complexidade;3480738
+São José dos Campos;2019;alta complexidade;3482
+São José dos Campos;2020;atenção básica;1864874
+São José dos Campos;2020;média complexidade;2850383
+São José dos Campos;2020;alta complexidade;2810
+São José dos Campos;2021;atenção básica;2197883
+São José dos Campos;2021;média complexidade;3702915
+São José dos Campos;2021;alta complexidade;2370
+São José dos Campos;2022;atenção básica;1932867
+São José dos Campos;2022;média complexidade;4188664
+São José dos Campos;2022;alta complexidade;2589
+Jacareí;2019;atenção básica;129328
+Jacareí;2019;média complexidade;982960
+Jacareí;2020;atenção básica;84537
+Jacareí;2020;média complexidade;658223
+Jacareí;2021;atenção básica;219730
+Jacareí;2021;média complexidade;901621
+Jacareí;2022;atenção básica;184203
+Jacareí;2022;média complexidade;1057554
+Taubaté;2019;atenção básica;1319165
+Taubaté;2019;média complexidade;1889552
+Taubaté;2019;alta complexidade;1212
+Taubaté;2020;atenção básica;861652
+Taubaté;2020;média complexidade;1249638
+Taubaté;2020;alta complexidade;1034
+Taubaté;2021;atenção básica;421308
+Taubaté;2021;média complexidade;1229143
+Taubaté;2021;alta complexidade;1143
+Taubaté;2022;atenção básica;413669
+Taubaté;2022;média complexidade;1947723
+Taubaté;2022;alta complexidade;1192

@@ -68,7 +68,16 @@ def pesquisa():
     title = "Pesquisas"
     return render_template('pesquisa.html', title=title)
 
+@app.route('/feedbacks')
+def feedbacks():
+    cur = mysql.connection.cursor()
 
+    feedbacks = cur.execute("SELECT * FROM feedback")
+
+    if feedbacks > 0:
+        userDetails = cur.fetchall()
+
+        return render_template("feedbacks.html", userDetails=userDetails)
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():

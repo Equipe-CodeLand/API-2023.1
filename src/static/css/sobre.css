@@ -91,6 +91,29 @@ main {
 #content_2 tr:hover {
     background-color: #fcbab9;
 }
+/* botao do feedback */
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container .botao {
+    margin-right: 10px;
+    
+}
+
+.button-container .feedback-link {
+    margin-left: 60%;
+}
+
+@media (max-width: 500px) {
+    .feedback-link {
+      margin-left: 10%;
+    }
+  }
+
+
+/* acaba aqui o botao do feedback */
 
 @media (max-width: 1000px) {
     #content_1 {

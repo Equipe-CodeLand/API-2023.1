@@ -31,8 +31,7 @@ main section.grid-container a {
 }
 
 main section.content {
-    display: grid;
-    grid-template-columns: 60% 40%;
+    display: flex;
     margin: auto;
     padding: 40px 20px;
     max-width: 1600px;
@@ -41,13 +40,14 @@ main section.content {
 }
 
 main section.content div.text {
-    display: grid;
+    display: flex;
     align-items: center;
     margin: auto;
     text-align: center;
 }
 
 main section.content div.text p {
+    display: flex;
     max-width: 800px;
     min-width: none;
     font-family: "Inter", sans-serif;
@@ -60,11 +60,20 @@ main section.content div.img {
 
 @media (max-width: 1600px) {
     main section.content {
-        grid-template-columns: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     main section.content div.img {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+
+    main section.content div.text p{
+        display: flex;
+        flex-direction: row;
+        flex: 2;
     }
 }
 

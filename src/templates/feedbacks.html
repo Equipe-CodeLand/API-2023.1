@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/base.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css')}}">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body class="body-wrapper">
+    
+    <div class="table-wrapper">
+        <table id="users" class="display" >
+            <thead>
+
+                <tr>
+                    <th>Código</th>
+                    <th>E-mail</th>
+                    <th>Comentario</th>
+                    <th>data de envio</th>
+
+                </tr>
+            </thead>
+            
+            {% for user in userDetails %}
+            
+            <tbody>
+                <tr>
+                    <td>{{user[0]}}</td>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[3]}}</td>
+                </tr>
+            </tbody>
+            
+            {% endfor %}
+
+        </table>
+    </div>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#users').DataTable({
+                "language": {
+                    "lengthMenu": "",
+                    "zeroRecords": "Nada encontrado",
+                    "info": "",
+                    "infoEmpty": "Nenhum registro disponível",
+                    "infoFiltered": "(filtrado de _MAX_ registros no total)"
+                },
+                "searching": false,
+                "paging": false,
+                "ordering": false
+            });
+        });
+    </script>
+
+</body>
+
+<style>
+    .body-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .table-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20%;
+    }
+
+    
+</style>
+
+{% endblock %}

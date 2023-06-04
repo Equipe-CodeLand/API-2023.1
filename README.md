@@ -12,7 +12,7 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 <br>
 
-<h3> 📌 Status do projeto: Em andamento ⏳</h3>
+<h3> 📌 Status do projeto: Concluído ✔️ </h3>
 
 <h3> 🛠️ Tecnologias utilizadas até o momento: </h3>
 
@@ -28,6 +28,8 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
     <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white&color=F46A67"/>
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&color=F46A67"/>
     <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white&color=F46A67"/>
+    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=white&color=F46A67"/>
+    
 </div>
 
 <br>
@@ -40,7 +42,11 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 <h6> 2.1. Recomendamos o uso da senha "12345", que já esta predefinida no arquivo app.py, mas você pode alterá-la de acordo com sua senha MySQL. </h6>
 
-<h5> 3. Abra o terminal do seu disposivo. </h5>
+<h6> 2.2. Pesquise por "Serviços" na barra de tarefas do seu dispositivo, abra o programa e procure por "MySQL80". </h6>
+
+<h6> 2.3. Clique com o botão direito e inicie o serviço. </h6>
+
+<h5> 3. Pesquise por "Terminal" na barra de tarefas do seu dispositivo e abra o terminal. </h5>
 
 <h5> 4. Clone o repositório utilizando este comando: </h5>
 
@@ -67,10 +73,10 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
     #Defina a senha abaixo de acordo com seu MySQL:
     app.config["MYSQL_PASSWORD"] = "12345"
     
-<h6> 7.1. Exemplo: Digamos que sua senha do MySQL seja " abacate ", você substiuirá a senha por: </h6>
+<h6> 7.1. Exemplo: Digamos que sua senha do MySQL seja " abcd ", você substiuirá a senha por: </h6>
     
     #Defina a senha abaixo de acordo com seu MySQL:
-    app.config["MYSQL_PASSWORD"] = "abacate"
+    app.config["MYSQL_PASSWORD"] = "abcd"
 
 <h5> 8. Execute a aplicação com o comando: </h5>
     
@@ -96,10 +102,10 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 | Sprint |   Início   |  Entrega   |                                      Relatório                                      | Status |
 | :----: | :--------: | :--------: | :---------------------------------------------------------------------------------: | :----: |
-|   01   | 13/03/2023 | 02/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V1.0">Relatório</a>  |    ✔️   |
-|   02   | 03/04/2023 | 23/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V2.0">Relatório</a>  |    ✔️   |
-|   03   | 24/04/2023 | 14/05/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V3.0">Relatório</a>  |    ✔️   |
-|   04   | 15/05/2023 | 14/06/2023 | Em andamento                                                                        |  ⏳     |
+|   01   | 13/03/2023 | 02/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V1.0"> Relatório </a>  |    ✔️   |
+|   02   | 03/04/2023 | 23/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V2.0"> Relatório </a>  |    ✔️   |
+|   03   | 24/04/2023 | 14/05/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V3.0"> Relatório </a>  |    ✔️   |
+|   04   | 15/05/2023 | 04/06/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V4.0"> Relatório </a>  |    ✔️   |
 
 <br>
 
@@ -122,18 +128,15 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 |    2    | Protótipo navegável - sobre o projeto   | Utilizar a base do protótipo para desenvolver a página "sobre o projeto".                                         |   ✔️  |
 |    2    | Desenvolver a logo                      | Criar uma logo para o site do projeto.                                                                            |   ✔️  |
 |    2    | Controle de versões                     | Adicionar Tags ao que já foi feito e ao final da sprint.                                                          |   ✔️  |
-|    3    | Estudo de Python 3                      | Estudo de como será feita a integração do banco de dados com o site através do Python3                            |   ✔️  |
 |    3    | Criar arquivos CSV                      | Transformar os dados arrecadados no excel para .CSV                                                               |   ✔️  |
 |    3    | Raspagem de dados                       | Implementar a raspagem de dados dos arquivos .CSV                                                                 |   ✔️  |
-|    3    | Pesquisa medicamentos                   | Complementar a pesquisa sobre medicamentos, de acordo com o que foi citado na reunião com o Jornalista            |   ✔️  |
-|    3    | Pesquisa tratamentos covid longa        | Pesquisar sobre como são tratados os sintomas da covid-long                                                       |   ✔️  |
 |    3    | Formulário para feedbacks               | Adiconar um formulário para feedbacks do usuário na página Sobre                                                  |   ✔️  |
 |    3    | Banco de dados para feedbacks           | Desenvolver um Banco de Dados MySql para armazenas as mensagens enviadas                                          |   ✔️  |
 |    3    | Integrar o banco ao site                | Vincular o Banco de Dados ao formulário através de python                                                         |   ✔️  |
 |    3    | Filtros                                 | Adição dos filtros na página Pesquisa                                                                             |   ✔️  |
-|    4    | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                        |  ❌   |
-|    4    | Testes Finais                           | Assegurar que o Banco de Dados e todas as funcionalidades estão de acordo.                                        |   ❌  |
-|    4    | Pop-Up                                  | Mensagem personalizada emitida ao enviar o formulário de feedbacks                                                |   ❌  |
+|    4    | Responsividade                          | Atualizar o CSS para garantir que o site fique responsivo.                                                        |  ✔️   |
+|    4    | Ajustes Finais                           | Assegurar que todas as funcionalidade estão de acordo.                                                            |   ✔️  |
+|    4    | Pop-Up's                                 | Mensagens personalizadas ao enviar o formulário de feedback, não preencher os campos do formulário ou filtros. |   ✔️  |
 
 
 <br>

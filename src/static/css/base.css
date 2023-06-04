@@ -112,3 +112,7 @@ footer p {
         font-size: 1em;
     }
 }
+
+.table-wrapper {
+    font-family: 'Inter', sans-serif;
+}

@@ -102,10 +102,10 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 | Sprint |   Início   |  Entrega   |                                      Relatório                                      | Status |
 | :----: | :--------: | :--------: | :---------------------------------------------------------------------------------: | :----: |
-|   01   | 13/03/2023 | 02/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V1.0">Relatório</a>  |    ✔️   |
-|   02   | 03/04/2023 | 23/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V2.0">Relatório</a>  |    ✔️   |
-|   03   | 24/04/2023 | 14/05/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V3.0">Relatório</a>  |    ✔️   |
-|   04   | 15/05/2023 | 04/06/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V4.0">Relatório</a>  |    ✔️   |
+|   01   | 13/03/2023 | 02/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V1.0"> Relatório </a>  |    ✔️   |
+|   02   | 03/04/2023 | 23/04/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V2.0"> Relatório </a>  |    ✔️   |
+|   03   | 24/04/2023 | 14/05/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V3.0"> Relatório </a>  |    ✔️   |
+|   04   | 15/05/2023 | 04/06/2023 | <a href="https://github.com/Equipe-01-DSM-2023/API-2023.1/tree/V4.0"> Relatório </a>  |    ✔️   |
 
 <br>
 

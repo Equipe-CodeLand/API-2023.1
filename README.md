@@ -156,7 +156,7 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
         <td> Scrum Master </td>
         <td> Felipe Gabriel Vieira </td>
         <td> <a href="https://www.linkedin.com/in/velipefieira/"> <img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&color=1AB85C'/> </a> </td>
-        <td> <a href="github.com/velipefieira"> <img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&color=1AB85C'/> </a> </td>
+        <td> <a href="https://github.com/velipefieira"> <img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&color=1AB85C'/> </a> </td>
     </tr>
     <tr>
         <td> <img src="https://avatars.githubusercontent.com/u/104635440?v=4" alt="ft de perfil" height="32px" width="32px"> </td>

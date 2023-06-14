@@ -36,9 +36,9 @@ Nosso projeto consiste em um site focado em dados relacionados a Covid-19, seus 
 
 <h2> 🖥️ Rode a Aplicação:</h2>
 
-<h5> 1. Certifique de ter python 3.7 ou superior instalado em sua máquina, caso não tenha, <a href="https://www.python.org/downloads/" target="_blank"> clique aqui </a> </h5>
+<h5>1. Certifque de ter o <a href="https://git-scm.com/downloads"> Git </a> e o <a href="https://www.python.org/downloads/"> Python </a> instalado. </h5>
 
-<h5> 2. Certifque de ter o mysql 8.0 ou superior instalado em sua máquina, caso não tenha, <a href="https://dev.mysql.com/downloads/workbench/" target="_blank"> clique aqui </a> </h5>
+<h5> 2. Certifque de ter o <a href="https://dev.mysql.com/downloads/workbench/" target="_blank"> MySQL </a> 8.0 ou superior instalado. </h5>
 
 <h6> 2.1. Recomendamos o uso da senha "12345", que já esta predefinida no arquivo app.py, mas você pode alterá-la de acordo com sua senha MySQL. </h6>
 

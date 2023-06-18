@@ -11,3 +11,5 @@ mysql-connector-python==8.0.33
 mysqlclient==2.1.1
 protobuf==3.20.3
 Werkzeug==2.2.3
+Django==3.2.4
+requests==2.25.1

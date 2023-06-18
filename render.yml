@@ -1,0 +1,10 @@
+buildCommand:
+  - name: Upgrade pip
+  command: /opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
+  - name: Install Dependencies
+    command: pip install -r requirements.txt
+  - name: Run Migrations
+    command: python manage.py migrate
+  - name: Collect Static Files
+    command: python manage.py collectstatic --noinput
+startCommand: gunicorn app:app

@@ -1,7 +1,6 @@
 from flask import Flask, redirect, render_template, request, jsonify, url_for
 from flask_cors import CORS, cross_origin
 from pesquisa import *
-from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -26,29 +25,6 @@ dados = [
 
 ]
 
-app.config["MYSQL_Host"] = "localhost"
-app.config["MYSQL_USER"] = "fatec"
-
-#Defina a senha abaixo de acordo com seu MySQL:
-app.config["MYSQL_PASSWORD"] = "P@ssword1234"
-
-mysql = MySQL(app)
-with app.app_context():
-     cur = mysql.connection.cursor()
-     cur.execute('''
-         CREATE DATABASE IF NOT EXISTS api_2023_1;
-         USE api_2023_1;
-         CREATE TABLE IF NOT EXISTS feedback (
-             codigo INT AUTO_INCREMENT PRIMARY KEY,
-             email VARCHAR(60),
-             comentario VARCHAR(255),
-             data_envio DATETIME NOT NULL DEFAULT NOW()
-         );
-     ''')
-     cur.close()
-
-app.config["MYSQL_DB"] = "api_2023_1"
-
 @app.route('/')
 def home():
     title = "Home"
@@ -66,28 +42,11 @@ def pesquisa():
 
 @app.route('/feedbacks')
 def feedbacks():
-    cur = mysql.connection.cursor()
-
-    feedbacks = cur.execute("SELECT * FROM feedback")
-
-    if feedbacks > 0:
-        userDetails = cur.fetchall()
-
         title = "Feedbacks"
-        return render_template("feedbacks.html", userDetails=userDetails, title=title)
+        return render_template("feedbacks.html", title=title)
 
 @app.route('/sobre', methods=["GET", "POST"])
 def sobre():
-    if request.method == "POST":
-        email = request.form["email"]
-        comentario = request.form["comentario"]
-
-        cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO feedback(email, comentario)VALUES(%s, %s)", (email, comentario))
-        mysql.connection.commit()
-        cur.close()
-
-        return redirect(url_for('feedbacks'))
     title = "Sobre o Projeto"
     return render_template('sobre.html', title = title)
 

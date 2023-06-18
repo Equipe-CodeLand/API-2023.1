@@ -1,6 +1,8 @@
 buildCommand:
-  - name: Upgrade pip
-  command: /opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
+  build:
+  command:
+    - /opt/render/project/src/.env/bin/python -m pip install --upgrade pip
+    - /opt/render/project/src/.env/bin/python -m pip install -r requirements.txt
   - name: Install Dependencies
     command: pip install -r requirements.txt
   - name: Run Migrations
